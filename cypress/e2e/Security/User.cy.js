@@ -4,7 +4,7 @@ describe('User', () => {
     it('User CRUD', () => {
         // cy.visit('http://localhost:1750')
         Login();
-        Save();
+         Save();
         Search();
         View();
         Edit();
@@ -16,13 +16,14 @@ describe('User', () => {
 export function Save() {
     var name = "Rimsha" + new Date().getMilliseconds() + "090021"
     // cy.get('.css-h4y409-MuiList-root > :nth-child(1) > .MuiListItemText-root > .MuiTypography-root').click()
-    cy.get('.css-h4y409-MuiList-root > :nth-child(1) > .MuiListItemText-root > .MuiTypography-root').click()
+    cy.get(':nth-child(2) > .MuiListItemButton-root').click()
+    //cy.get('.css-h4y409-MuiList-root > :nth-child(1) > .MuiListItemText-root > .MuiTypography-root').click()
     cy.wait(2000);
     cy.get(
         '[href="/Security/User"] > .MuiListItemText-root > .MuiTypography-root'
     ).click();
     cy.wait(2000);
-    cy.get(".css-1ibeobj > .MuiFab-root").click();
+    cy.get(".MuiContainer-root > .MuiFab-root").click();
     cy.wait(2000);
     cy.get("#UserName").type(name);
     cy.get("#Password").type("Rim@123");
@@ -41,16 +42,16 @@ export function Save() {
 }
 
 export function Search(){
-    cy.get('#root > div > main > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation2.css-yl3kvk-MuiPaper-root > div.MuiBox-root.css-187halg > div > div > div > table > tbody > tr:nth-child(1) > td:nth-child(1) > div > div')
-    .type('Ahm')
-    cy.get(20000);
-
+    cy.get('#UserName').type('Rimsha')
+    cy.wait(2000);
 }
 export function View() {
-    cy.get('[index="4"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > [tabindex="0"]').click()
+    cy.get(20000);
+
     //cy.get('#root > div > main > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation2.css-yl3kvk-MuiPaper-root > div.MuiBox-root.css-187halg > div > div > div > table > tbody > tr:nth-child(18) > td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-paddingNone.MuiTableCell-sizeMedium.css-18gecpw-MuiTableCell-root > div > button').click()
-    cy.wait(2000);
-    cy.get('.MuiList-root > [tabindex="0"]').click()
+    //cy.get('.MuiList-root > [tabindex="0"]').click()
     // cy.get(
     //     '[href="/Security/User"] > .MuiListItemText-root > .MuiTypography-root'
     // ).click();
@@ -66,9 +67,9 @@ export function View() {
 export function Edit() {
     var name = "RAFAY" + new Date().getMilliseconds()
     cy.get(2000);
-    cy.get('#root > div > main > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation2.css-yl3kvk-MuiPaper-root > div.MuiBox-root.css-187halg > div > div > div > table > tbody > tr:nth-child(2) > td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-paddingNone.MuiTableCell-sizeMedium.css-18gecpw-MuiTableCell-root > div > button').click()
+    cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(2000);
-    cy.get('#simple-menu > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiMenu-paper.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1xbokmk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper > ul > li:nth-child(2)').click()
+    cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
     cy.wait(2000);
     // cy.get('#root > div > main > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation2.css-yl3kvk-MuiPaper-root > div.MuiBox-root.css-187halg > div > div > div > table > tbody > tr:nth-child(2) > td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-paddingNone.MuiTableCell-sizeMedium.css-18gecpw-MuiTableCell-root > div > button').click();
     // cy.wait(2000);
@@ -106,23 +107,24 @@ export function Edit() {
     //         // Display an error message if the button was not clicked
     //         cy.log('Error: The button was not clicked')
     //     })
-    cy.get("#root > div > main > div > div:nth-child(2) > div > div > div.MuiCardActions-root.MuiCardActions-spacing.css-8xjt7c-MuiCardActions-root > div > div:nth-child(3) > div > div > div:nth-child(1) > button").click();
+    cy.get('#root > div > main > div > div > div:nth-child(2) > div > div > div.MuiCardActions-root.MuiCardActions-spacing.css-8xjt7c-MuiCardActions-root > div > div:nth-child(3) > div > div > div:nth-child(1) > button').click()
+    //cy.get("#root > div > main > div > div:nth-child(2) > div > div > div.MuiCardActions-root.MuiCardActions-spacing.css-8xjt7c-MuiCardActions-root > div > div:nth-child(3) > div > div > div:nth-child(1) > button").click();
     //cy.visit('http://localhost:1750/Security/User')
     cy.wait(3000);
 }
 
 export function Delete() {
     //cy.get('#root > div > main > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation2.css-yl3kvk-MuiPaper-root > div.MuiBox-root.css-187halg > div > div > div > table > tbody > tr:nth-child(3) > td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-paddingNone.MuiTableCell-sizeMedium.css-18gecpw-MuiTableCell-root > div > button').click()
-    cy.get('#root > div > main > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation2.css-yl3kvk-MuiPaper-root > div.MuiBox-root.css-187halg > div > div > div > table > tbody > tr:nth-child(2) > td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-paddingNone.MuiTableCell-sizeMedium.css-18gecpw-MuiTableCell-root > div > button').click()
+    cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(2000);
-    cy.get('#simple-menu > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiMenu-paper.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1xbokmk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper > ul > li:nth-child(3)').click();
+    cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
     cy.wait(2000);
-    cy.get('body > div.MuiModal-root.css-79ws1d-MuiModal-root > div:nth-child(3) > div > div.MuiCardActions-root.MuiCardActions-spacing.css-gdzt7s-MuiCardActions-root > div > button.MuiButton-root.MuiButton-contained.MuiButton-containedError.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.css-10fwo5v-MuiButtonBase-root-MuiButton-root').click();
+    //cy.get('body > div.MuiModal-root.css-79ws1d-MuiModal-root > div:nth-child(3) > div > div.MuiCardActions-root.MuiCardActions-spacing.css-gdzt7s-MuiCardActions-root > div > button.MuiButton-root.MuiButton-contained.MuiButton-containedError.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButtonBase-root.css-10fwo5v-MuiButtonBase-root-MuiButton-root').click();
     cy.wait(3000);
     cy.visit('http://localhost:1750/Security/User');
-    cy.get('#root > div > main > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation2.css-yl3kvk-MuiPaper-root > div.MuiBox-root.css-187halg > div > div > div > table > tbody > tr:nth-child(6) > td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-paddingNone.MuiTableCell-sizeMedium.css-18gecpw-MuiTableCell-root > div > button').click()
+    cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(2000);
-    cy.get('#simple-menu > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiMenu-paper.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1xbokmk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper > ul > li:nth-child(3)').click();
+    cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
     cy.wait(2000);
     cy.get('body > div.MuiModal-root.css-79ws1d-MuiModal-root > div:nth-child(3) > div > div.MuiCardActions-root.MuiCardActions-spacing.css-gdzt7s-MuiCardActions-root > div > button.MuiButton-root.MuiButton-outlined.MuiButton-outlinedPrimary.MuiButton-sizeMedium.MuiButton-outlinedSizeMedium.MuiButtonBase-root.css-1t7t7fh-MuiButtonBase-root-MuiButton-root').click();
     cy.wait(2000);
