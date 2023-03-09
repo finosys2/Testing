@@ -1,7 +1,7 @@
 import { Login } from "../Login.cy";
 
 describe('Roles', () => {
-    it('User CRUD', () => {
+    it('Role CRUD', () => {
         // cy.visit('http://localhost:1750')
         Login();
         Save();
@@ -85,6 +85,8 @@ export function Save() {
     cy.get(':nth-child(6) > [data-rbd-draggable-context-id="9"] > [style="text-align: center; display: flex; flex-direction: column; align-items: center;"] > :nth-child(1) > div > .MuiFormControlLabel-root > .MuiCheckbox-root > .PrivateSwitchBase-input').click()
     cy.wait(2000)
     cy.get('.MuiButtonGroup-root > :nth-child(1) > .MuiButtonBase-root').click()
+    cy.wait(7000)
+    cy.get('.MuiButtonGroup-root > .MuiButtonBase-root').click()
     cy.wait(3000)
 }
 

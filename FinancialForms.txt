@@ -1,0 +1,19 @@
+FINANCIAL:
+back button is working manually, but path issue in all forms, can't get path of that button.
+
+1)- Financial-----> Setup-----> Period (Save and Edit is not correctly working during testing)
+2)- Financial-----> Setup-----> Tax Detail (All done) ✅
+3)- Financial-----> Setup-----> Tax Schedule (The save record is not being edited, instead, a new record is created after editing).
+4)- Financial-----> Setup-----> Bank (active click path issue that is not correctly getting)❌ 
+5)- Financial-----> Setup-----> Aging Buckets (All done)✅
+6)- Financial-----> Setup-----> Payment Terms (All done)✅
+7)- Financial-----> Setup-----> Payment Modes (OnSave click Loader is not defined error)
+8)- Financial-----> Setup-----> Segment Values (form is not working , contineously show loading)
+9)- Financial-----> Setup-----> Cards (All done)✅
+10)- Financial-----> Setup-----> Jobs (data is not defined error while creating job)
+11)- Financial-----> Setup-----> Currencies (Add exchange rate is not working in Edit mode , 404 error occur otherwise all done)
+12)- Financial-----> Setup-----> Budgets (when created a record without click on generate button, record successfully saved
+ there is no validation given, or sometime it gives contineously loading when click on save & continue button)
+13)- Financial-----> Setup-----> Territories (All done)✅
+14)- Financial-----> Setup-----> Shipping Method (All done)✅
+15)- Financial-----> Setup-----> Extended Jobs
