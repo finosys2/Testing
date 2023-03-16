@@ -100,7 +100,7 @@ export function Edit() {
     cy.wait(1000);
 }
 export function View() {
-    cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(2000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(1)').click()
     cy.wait(2000);
@@ -120,13 +120,13 @@ export function Download() {
 }
 
 export function Delete() {
-    cy.get('[index="2"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(2000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
     cy.wait(2000);
     cy.get('.MuiGrid-root > .MuiButton-contained').click()
     cy.wait(1000);
-    cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(2000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
     cy.wait(2000);

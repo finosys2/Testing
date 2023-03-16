@@ -16,13 +16,13 @@ export function Save() {
     var CPCode = "88" + new Date().getMilliseconds() 
     cy.visit('http://40.81.28.195:1550/Financials/Setup/CustomerProfiles')
     cy.wait(2000);
-    cy.get('#root > div > main > div > div.MuiButtonBase-root.MuiFab-root.MuiFab-circular.MuiFab-sizeLarge.MuiFab-secondary.MuiFab-root.MuiFab-circular.MuiFab-sizeLarge.MuiFab-secondary.css-12itd30-MuiButtonBase-root-MuiFab-root').click()
+    cy.get('.MuiContainer-root > .MuiFab-root').click()
     cy.wait(1000);
     cy.get('#CPCode').type(CPCode)
     cy.wait(1000);
     cy.get('#CP').type('Customer')
     cy.wait(1000);
-    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').type('100')
+    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').type(78.00)
     cy.wait(1000);
     cy.get(':nth-child(4) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
     cy.wait(1000);
@@ -87,13 +87,13 @@ export function Save() {
 }
 export function Clear() {
     var CPCode = "88" + new Date().getMilliseconds() 
-    cy.get('#root > div > main > div > div.MuiButtonBase-root.MuiFab-root.MuiFab-circular.MuiFab-sizeLarge.MuiFab-secondary.MuiFab-root.MuiFab-circular.MuiFab-sizeLarge.MuiFab-secondary.css-12itd30-MuiButtonBase-root-MuiFab-root').click()
+    cy.get('.MuiContainer-root > .MuiFab-root').click()
     cy.wait(1000);
     cy.get('#CPCode').type(CPCode)
     cy.wait(1000);
     cy.get('#CP').type('Customer')
     cy.wait(1000);
-    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').type('100')
+    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').type('787')
     cy.wait(1000);
     cy.get(':nth-child(4) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
     cy.wait(1000);

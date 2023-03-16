@@ -4,8 +4,8 @@ describe('Donor Registration', () => {
     it('Donor Registration CRUD', () => {
         // cy.visit('http://localhost:1750')
         Login();
-        Save();       
-        Edit();
+        // Save();       
+        // Edit();
         View();
         Delete();
         Download();
@@ -36,7 +36,7 @@ export function Save() {
     cy.wait(1000);
     cy.get('#mui-31').type('4232317593435')
     cy.wait(1000);
-    cy.get('#mui-32').type('4232')
+    cy.get('#mui-32').type('42323232')
     cy.wait(1000);
     cy.get('#Email').type('sas@gmail.com')
     cy.wait(1000);
@@ -81,7 +81,7 @@ export function Edit() {
     cy.wait(1000);
     cy.get('#Email').clear()
     cy.wait(1000);
-    cy.get('#Email').type('set@gmail.com')
+    cy.get('#Email').type('test@gmail.com')
     cy.wait(1000);
     cy.get('.MuiFormControlLabel-root > .MuiTypography-root').click()
     cy.wait(1000);
@@ -90,6 +90,8 @@ export function Edit() {
 }
 
 export function View() {
+    cy.visit('http://40.81.28.195:1550/Financials/Setup/DonorRegistration')
+    cy.wait(2000);
     cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(2000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(1)').click()
