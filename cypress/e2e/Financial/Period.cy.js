@@ -14,7 +14,7 @@ describe('Period', () => {
 
 });
 export function Save() {
-    var number = "223" + new Date().getMilliseconds() + "0821"
+    var number = '20'+ new Date().getMilliseconds()
     //cy.visit('http://localhost:1750/Financials/Setup/Period')
     cy.visit('http://40.81.28.195:1550/Financials/Setup/Period')
     cy.wait(2000);
@@ -32,10 +32,12 @@ export function Save() {
     cy.get('[index="1"] > :nth-child(5) > div > .MuiFormControlLabel-root > .MuiCheckbox-root > .PrivateSwitchBase-input').click()
     cy.wait(2000);
     cy.get('[index="4"] > :nth-child(6) > div > .MuiFormControlLabel-root > .MuiCheckbox-root > .PrivateSwitchBase-input').click()
-    //cy.wait(2000);
+    cy.wait(2000);
     cy.get('.MuiButtonGroup-root > :nth-child(1) > .MuiButtonBase-root').click()
-    //cy.wait(7000);
+    cy.wait(7000);
     cy.get('.MuiButtonGroup-root > .MuiButtonBase-root').click()
+    cy.wait(2000);
+    //cy.get('.MuiButtonGroup-root > .MuiButtonBase-root').click()
     //cy.wait(2000);
     // cy.get('.MuiContainer-root > .MuiFab-root').click()
     // cy.wait(2000);
