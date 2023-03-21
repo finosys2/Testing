@@ -11,6 +11,6 @@
   "keywords": [],
   "description": "",
   "devDependencies": {
-    "cypress": "^12.7.0"
+    "cypress": "^12.8.1"
   }
 }
