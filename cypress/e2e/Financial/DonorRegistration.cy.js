@@ -4,11 +4,12 @@ describe('Donor Registration', () => {
     it('Donor Registration CRUD', () => {
         // cy.visit('http://localhost:1750')
         Login();
-        // Save();       
-        // Edit();
+        Save();       
+        Edit();
         View();
         Delete();
         Download();
+        Search();
     })
 })
 
@@ -123,4 +124,14 @@ export function Download() {
     cy.wait(2000);
     cy.get('.css-10nakn3-MuiModal-root-MuiPopover-root-MuiMenu-root > .MuiPaper-root > .MuiList-root > [tabindex="-1"]').click()
     cy.wait(2000);
+}
+export function Search() {
+    cy.get('#DonorCode').type('4447')
+    cy.wait(1000);
+    cy.get('#DonorName').type('donor')
+    cy.wait(1000);
+    cy.get('#DonorCode').clear()
+    cy.wait(1000);
+    cy.get('#DonorName').clear()
+    cy.wait(1000);
 }
