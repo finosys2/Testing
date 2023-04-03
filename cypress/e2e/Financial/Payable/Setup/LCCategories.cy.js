@@ -1,5 +1,5 @@
 
-import { Login } from "../../Login.cy";
+import { Login } from "../../../Login.cy";
 
 describe('LCCategories', () => {  
     it('LCCategories CRUD', () => {  

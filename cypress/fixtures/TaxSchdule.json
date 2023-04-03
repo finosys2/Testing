@@ -1,0 +1,11 @@
+{
+    "FormName": "TaxSchedule",
+    "validData":{
+        "TaxScheduleCode": "786",
+        "TaxSchedule": "Sales test"
+    },
+    "invalidData":{
+        "TaxScheduleCode": "",
+        "TaxSchedule": "Sales test"
+    }
+}

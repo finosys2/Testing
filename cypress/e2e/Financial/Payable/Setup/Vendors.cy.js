@@ -1,4 +1,4 @@
-import { Login } from '../Login.cy.js';
+import { Login } from '../../../Login.cy.js';
 
 describe('Vendors', () => {
     it('Vendors CRUD', () => {

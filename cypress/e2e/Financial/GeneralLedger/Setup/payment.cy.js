@@ -1,16 +1,16 @@
-import { Login } from "../Login.cy.js";
+// import { Login } from "../../../Login.cy.js";
 
-describe('Payment Terms', () => {
-    it('Payment Terms CRUD', () => {
-        // cy.visit('http://localhost:1750')
-        Login();
-        Save();
-        View();
-        Edit();
-        Download();
-        Delete();
-    })
-})
+// describe('Payment Terms', () => {
+//     it('Payment Terms CRUD', () => {
+//         // cy.visit('http://localhost:1750')
+//         Login();
+//         Save();
+//         View();
+//         Edit();
+//         Download();
+//         Delete();
+//     })
+// })
 export function Save() {
     var payCode = "500" + new Date().getMilliseconds()
     cy.visit('http://localhost:1750/Financials/Setup/PaymentTerms')

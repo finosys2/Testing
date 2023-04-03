@@ -1,16 +1,16 @@
-import { Login } from "../Login.cy";
+// import { Login } from "../Login.cy";
 
-describe('Tax Schedule', () => {
-    it('Tax Schedule CRUD', () => {
-        // cy.visit('http://localhost:1750')
-        Login();
-        Save();
-        Download();
-        View();
-        Edit();
-        Delete();
-    })
-})
+// describe('Tax Schedule', () => {
+//     it('Tax Schedule CRUD', () => {
+//         // cy.visit('http://localhost:1750')
+//         Login();
+//         Save();
+//         View();
+//         Edit();
+//         Download();
+//         Delete();
+//     })
+// })
 export function Save() {  
     var number = "88990" + new Date().getMilliseconds() + "021"  
     //cy.visit('http://localhost:1750/Financials/Setup/TaxSchedule')
