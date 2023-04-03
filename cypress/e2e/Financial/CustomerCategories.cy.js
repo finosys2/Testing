@@ -5,10 +5,11 @@ describe('Customer Categories', () => {
         // cy.visit('http://localhost:1750')
         Login();
         Save();       
-        Edit();
-        View();
-        Delete();
-        Download();
+        // Edit();
+        // View();
+        // Delete();
+        // Download();
+        Search();
     })
 })
 export function Save() {
@@ -75,5 +76,15 @@ export function Download() {
     cy.get('.css-12re8tr > :nth-child(1) > :nth-child(1) > :nth-child(1) > .MuiButtonBase-root').click()
     cy.wait(2000);
     cy.get('.css-10nakn3-MuiModal-root-MuiPopover-root-MuiMenu-root > .MuiPaper-root > .MuiList-root > [tabindex="-1"]').click()
+    cy.wait(2000);
+}
+export function Search() {
+    cy.get('.MuiTableBody-root > :nth-child(1) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #CustCatCode').type('8894')
+    cy.wait(2000);
+    cy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > #CustCat').type('test')
+    cy.wait(2000);
+    cy.get('.MuiTableBody-root > :nth-child(1) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #CustCatCode').clear()
+    cy.wait(2000);
+    cy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > #CustCat').clear()
     cy.wait(2000);
 }
