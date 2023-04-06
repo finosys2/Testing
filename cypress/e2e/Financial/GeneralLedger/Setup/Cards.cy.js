@@ -1,16 +1,16 @@
-import { Login } from "../Login.cy.js";
+// import { Login } from "../../../Login.cy.js";
 
-describe('Cards', () => {
-    it('Cards CRUD', () => {
-        // cy.visit('http://localhost:1750')
-        Login();
-        Save();
-        View();
-        Edit();
-        Download();
-        Delete();
-    })
-})
+// describe('Cards', () => {
+//     it('Cards CRUD', () => {
+//         // cy.visit('http://localhost:1750')
+//         Login();
+//         Save();
+//         View();
+//         Edit();
+//         Download();
+//         Delete();
+//     })
+// })
 export function Save() {
     var cardCode = "88990" + new Date().getMilliseconds() 
     cy.visit('http://localhost:1750/Financials/Setup/Cards')

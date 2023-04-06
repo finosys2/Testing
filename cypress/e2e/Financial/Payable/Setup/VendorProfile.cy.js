@@ -23,8 +23,8 @@ cy.get('#Code').type(ProfileCode)
 cy.wait(1000);
 cy.get('#Description').type('Vendor Profile default')
 cy.wait(1000);
-cy.get('#mui-125').clear()
-cy.get('#mui-125').type('100')
+cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').clear()
+cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').type('100')
 cy.wait(1000);
 cy.get(':nth-child(4) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
 cy.wait(1000);
@@ -63,11 +63,11 @@ cy.wait(1000);
 //finance charges
 cy.get('.MuiBox-root > div > .MuiFormControlLabel-root > .MuiButtonBase-root > .PrivateSwitchBase-input').click()
 cy.wait(1000);
-cy.get('#mui-126').clear()
-cy.get('#mui-126').type('1000')
+cy.get(':nth-child(2) > .MuiBox-root > .NumberFormat > .MuiFormControl-root').clear()
+cy.get(':nth-child(2) > .MuiBox-root > .NumberFormat > .MuiFormControl-root').type('1000')
 cy.wait(1000);
-cy.get('#mui-127').clear()
-cy.get('#mui-127').type('500')
+cy.get(':nth-child(3) > .MuiBox-root > .NumberFormat > .MuiFormControl-root').clear()
+cy.get(':nth-child(3) > .MuiBox-root > .NumberFormat > .MuiFormControl-root').type('500')
 cy.wait(1000);
 cy.get('.MuiButtonGroup-root > :nth-child(1) > .MuiButtonBase-root').click()
 cy.wait(7000);

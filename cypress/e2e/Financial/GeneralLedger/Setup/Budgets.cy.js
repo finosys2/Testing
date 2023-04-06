@@ -1,15 +1,15 @@
-import { Login } from "../Login.cy";
-describe('Budgets ', () => {  
-    it('Budgets CRUD', () => {  
-        // cy.visit('http://localhost:1750')  
-        Login();  
-        Save(); 
-        // View();  
-        // Edit();   
-        // Download();   
-        // Delete();  
-    })  
-})
+// import { Login } from "../../../Login.cy";
+// describe('Budgets ', () => {  
+//     it('Budgets CRUD', () => {  
+//         // cy.visit('http://localhost:1750')  
+//         Login();  
+//         Save(); 
+//         View();  
+//         Edit();   
+//         Download();   
+//         Delete();  
+//     })  
+// })
 export function Save(){
 var year = '2023' + new Date().getMilliseconds();
 //cy.visit('http://localhost:1750/Financials/Setup/Budgets')

@@ -1,0 +1,10 @@
+{
+  "validData": {
+    "PayModeCode": "224",
+    "PayModeDesc": "Easypaisa"
+  },
+  "invalidData": {
+    "PayModeCode": "",
+    "PayModeDesc": "Easypaisa"
+  }
+}

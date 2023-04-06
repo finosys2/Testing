@@ -1,9 +1,9 @@
 ﻿"Tax Detail Code","Tax Detail","Tax Type","Tax Rate","Is Active"
 "001","Sales Tax","All",17,true
-"001918234890","Sales Tax","Sales",53,false
-"002","FED","All",2,true
+"002","taxdetail test","All",40,true
 "003","Income Tax U/s. 149 Salary","All",2,true
 "004","hello Sales ","Sales",20,true
+"3322","taxdetail test edited","Sales",60,true
 "Sales Tax Input","Sales Tax Input","Purchases",17,true
 "Sales Tax Output","Sales Tax Output","Sales",17,true
 "WHT Tax","WHT Tax","All",4,true

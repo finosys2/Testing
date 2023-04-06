@@ -1,0 +1,13 @@
+{
+  "FormName": "PaymentTerm",
+
+  "validData": {
+    "PayTermCode": "560",
+    "PayTermDesc": "90days above payment"
+  },
+  
+  "invalidData": {
+    "PayTermCode": "",
+    "PayTermDesc": "wrong payment"
+  }
+}

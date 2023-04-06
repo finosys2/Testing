@@ -1,16 +1,16 @@
-import { Login } from "../Login.cy";
+import { Login } from "../../../Login.cy";
 
-describe('Currency', () => {  
-    it('Currency CRUD', () => {  
-        // cy.visit('http://localhost:1750')  
-        Login();  
-        Save(); 
-        View();  
-        // Edit();   
-        Download();   
-        Delete();  
-    })  
-})
+// describe('Currency', () => {  
+//     it('Currency CRUD', () => {  
+//         // cy.visit('http://localhost:1750')  
+//         Login();  
+//         Save(); 
+//         View();  
+//         Edit();   
+//         Download();   
+//         Delete();  
+//     })  
+// })
 export function Save(){
 var currCode = "004" + new Date().getMilliseconds();
 cy.visit('http://localhost:1750/Financials/Setup/Currencies')

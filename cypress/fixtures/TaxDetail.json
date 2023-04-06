@@ -1,0 +1,14 @@
+{
+  "FormName": "TaxDetail",
+
+  "validData": {
+    "TaxDetailCode": "3322",
+    "TaxDetail": "taxdetail test",
+    "TaxRate": "40"
+  },
+  "invalidData": {
+    "TaxDetailCode": "",
+    "TaxDetail": "",
+    "TaxRate": "20"
+  }
+}

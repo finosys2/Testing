@@ -1,0 +1,13 @@
+{
+    "FormName": "CustomerTerritory",
+
+    "validData":{
+        "CustTerCode": "006",
+        "CustTer": "notify terDesc"   
+    },
+
+    "invalidData":{
+        "CustTerCode": "",
+        "CustTer": "notify"  
+    }
+}

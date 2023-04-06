@@ -1,15 +1,15 @@
-import { Login } from "../Login.cy";
-describe('Jobs', () => {
-    it('Jobs CRUD', () => {
-        // cy.visit('http://localhost:1750')
-        Login();
-        Save();
-        // Download();
-        // View();
-        // Edit();
-        // Delete();
-    })
-})
+// import { Login } from "../../../Login.cy";
+// describe('Jobs', () => {
+//     it('Jobs CRUD', () => {
+//         // cy.visit('http://localhost:1750')
+//         Login();
+//         Save();
+//         View();
+//         Edit();
+//         Download();
+//         Delete();
+//     })
+// })
 export function Save() {
     var jobCode = "00091" + new Date().getMilliseconds();
     cy.visit('http://localhost:1750/Financials/Setup/Jobs')

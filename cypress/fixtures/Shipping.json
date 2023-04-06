@@ -1,0 +1,13 @@
+{
+    "FormName": "ShippingMethod",
+
+    "validData":{
+        "ShippingMethodCode": "0090",
+        "ShippingMethodDesc": "By ship area"
+    },
+
+    "invalidData":{
+        "ShippingMethodCode": "",
+        "ShippingMethodDesc": "By shipp"
+    }
+}

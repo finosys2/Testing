@@ -1,0 +1,29 @@
+{
+    "FormName": "Cards",
+
+    "validData":{ 
+        "CardCode": "007",
+        "CardType": "Employee",
+        "Phone1": "03333303789",
+        "CardName": "Arabish",
+        "Address": "xyz Area ",
+        "Phone2": "03160937852",
+        "City": "khi",
+        "PostCode": "70500",
+        "Email": "charac@gmail.com",
+        "Country": "Pakistan"   
+    },
+
+    "invalidData":{
+        "CardCode": "",
+        "CardType": "",
+        "Phone1": "03333303789",
+        "CardName": "",
+        "Address": "xyz Area ",
+        "Phone2": "03160937852",
+        "City": "khi",
+        "PostCode": "70500",
+        "Email": "charac@gmail.com",
+        "Country": "Pakistan"   
+    }
+}

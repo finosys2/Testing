@@ -1,0 +1,13 @@
+{
+    "FormName": "Job",
+     
+    "validData":{
+        "JobCode": "09000",
+        "JobDesc": "job limitation desc"
+    },
+
+    "invalidData":{
+        "JobCode": "",
+        "JobDesc": ""
+    }
+}
