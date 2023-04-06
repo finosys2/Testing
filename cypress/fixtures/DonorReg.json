@@ -1,0 +1,15 @@
+{
+    "FormName": "DonorRegistration",
+    "Header": {
+        "DonorCode": "1212",
+        "DonorName": "donor",
+        "Cnic": "4232317593435",
+        "NTN": "42323232",
+        "Email": "sas@gmail.com",
+        "Address": "address",
+        "City": "City",
+        "Country": "Country",
+        "Phone1": "123456",
+        "Phone2": "123443"
+    }
+}
