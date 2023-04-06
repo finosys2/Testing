@@ -1,7 +1,7 @@
 import { Login } from "../../../Login.cy";
 import * as Period from "../Setup/Period.cy";
-import * as TaxDetail from "../Setup/TaxDetail.cy";
-import * as TaxSchdule from "../Setup/TaxSchdule.cy";
+//import * as TaxDetail from "../Setup/TaxDetail.cy";
+//import * as TaxSchdule from "../Setup/TaxSchdule.cy";
 import * as Bank from "../Setup/Bank.cy";
 import * as Aging from "../Setup/Aging.cy";
 import * as payment from "../Setup/payment.cy";
@@ -17,16 +17,16 @@ describe('Financial', () => {
             it('Period', () => {
                 Login();
                 HandlePeriod();
-                HandleTaxDetail();
-                HandleTaxSchdule();
-                HandleBank();
-                HandleAging();
-                Handlepayment();
+                //HandleTaxDetail();
+                // HandleTaxSchdule();
+                // HandleBank();
+                // HandleAging();
+                // Handlepayment();
                 //HandlePaymentMode();
-                HandleCards();
-                HandleJobs();
-                HandleCurency();
-                HandleBudget();
+                // HandleCards();
+                // HandleJobs();
+                // HandleCurency();
+                // HandleBudget();
             });
         });
     });

@@ -1,0 +1,13 @@
+{
+  "FormName": "AgingBucket",
+
+  "validData": {
+    "AgBkCode": "0032",
+    "AgBkDesc": "32 DAY BUCKET"
+  },
+
+  "invalidData": {
+    "AgBkCode": "",
+    "AgBkDesc": ""
+  }
+}

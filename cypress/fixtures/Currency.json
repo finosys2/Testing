@@ -1,0 +1,17 @@
+{
+    "FormName": "Currency",
+
+    "validData":{
+        "CurCode": "PKRs10",
+        "CurName": "PKR currency",
+        "CurSymbol": "Rs",
+        "CurDecName": "paisa"
+    },
+
+    "invalidData":{
+        "CurCode": "",
+        "CurName": "",
+        "CurSymbol": "Rs",
+        "CurDecName": "paisa"
+    }
+}

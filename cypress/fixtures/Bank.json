@@ -1,0 +1,19 @@
+{
+  "FormName": "Bank",
+
+  "validData": {
+    "BankCode": "BAH12",
+    "BankName": "Bank Al-Habib",
+    "BankAC": "2944585201309",
+    "NextChequeNo": "59358220820",
+    "ReportName": "xyzabs"
+  },
+
+  "invalidData": {
+    "BankCode": "",
+    "BankName": "",
+    "BankAC": "2944585201309",
+    "NextChequeNo": "59358220820",
+    "ReportName": "xyzabs"
+  }
+}
