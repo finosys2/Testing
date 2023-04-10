@@ -1,4 +1,4 @@
-import { Login } from '../Login.cy.js';
+import { Login } from '../../../Login.cy.js';
 
 describe('Care Of', () => {
     it('Care Of CRUD', () => {
@@ -15,8 +15,8 @@ describe('Care Of', () => {
 
 export function Save() {
     cy.fixture('CareOf').then((payload) => {
-        const { CareOfCode } = payload.Header;
-        const { CareOf } = payload.Header;
+        const CareOfCode = payload.validData.CareOfCode;
+        const CareOf = payload.validData.CareOf;
         cy.visit('http://40.81.28.195:1550/Financials/Setup/CareOf')
         cy.wait(2000);
         cy.get('.MuiContainer-root > .MuiFab-root').click()
@@ -35,8 +35,7 @@ export function Save() {
 }
 export function Edit() {
     cy.fixture('CareOf').then((payload) => {
-        const { CareOf } = payload.Header;
-
+        const CareOf = payload.validData.CareOf;
         cy.get('[index="2"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
         cy.wait(2000);
         cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()

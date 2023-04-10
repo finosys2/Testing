@@ -1,9 +1,16 @@
 {
     "FormName": "Customers",
-    "Header": {
+
+    "validData": {
         "CustomerCode": "5454",
         "Customer": "testcase",
         "Alias": "Alias",
         "NTN": "10889000"
+    },
+    "invalidData": {
+        "CustomerCode": "5454",
+        "Customer": "testcase",
+        "Alias": "",
+        "NTN": ""
     }
 }

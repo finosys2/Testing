@@ -1,4 +1,4 @@
-import { Login } from '../Login.cy.js';
+import { Login } from '../../../Login.cy.js';
 
 describe('Customer Profile', () => {
     it('Customer Profile CRUD', () => {
@@ -14,64 +14,58 @@ describe('Customer Profile', () => {
     })
 })
 export function Save() {
-    var CPCode = "88" + new Date().getMilliseconds() 
+    cy.fixture('CustProfiles').then((payload) => {
+        const CPCode = payload.validData.CPCode;
+        const CP = payload.validData.CP;
+        const CL = payload.validData.CL;
+
     cy.visit('http://40.81.28.195:1550/Financials/Setup/CustomerProfiles')
     cy.wait(2000);
     cy.get('.MuiContainer-root > .MuiFab-root').click()
     cy.wait(1000);
-    cy.get('#CPCode').type(CPCode)
+    cy.get('.MuiGrid-container > :nth-child(1) > :nth-child(1) > .MuiFormControl-root').type('3232')
+    // cy.get('#CPCode').type(CPCode)
     cy.wait(1000);
-    cy.get('#CP').type('Customer')
+    cy.get('#CP').type(CP)
     cy.wait(1000);
-    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').type(78.00)
+    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').clear()
+    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').type(CL)
     cy.wait(1000);
     cy.get(':nth-child(4) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#PayTermDesc-undefined-option-1').click()
+    .get('#PayTermDesc-undefined-option-1').click()
     cy.wait(1000);
     cy.get(':nth-child(5) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#collector-undefined-option-1').click()
+    .get('#collector-undefined-option-1').click()
     cy.wait(1000);
     cy.get(':nth-child(6) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#salePer-undefined-option-1').click()
+    .get('#salePer-undefined-option-1').click()
     cy.wait(1000);
     cy.get(':nth-child(7) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#orderBooker-undefined-option-1').click()
+    .get('#orderBooker-undefined-option-1').click()
     cy.wait(1000);
     cy.get(':nth-child(8) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#CustCat-CustCat-option-3').click()
+    .get('#CustCat-CustCat-option-3').click()
     cy.wait(1000);
     cy.get(':nth-child(9) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#CustTer-undefined-option-2').click()
+    .get('#CustTer-undefined-option-2').click()
     cy.wait(1000);
     cy.get(':nth-child(10) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#AgBk-AgBk-option-4').click()
+    .get('#AgBk-AgBk-option-4').click()
     cy.wait(1000);
     cy.get(':nth-child(11) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#TaxSchedule-undefined-option-5').click()
+    .get('#TaxSchedule-undefined-option-5').click()
     cy.wait(1000);
     cy.get(':nth-child(12) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#RecAcctCode-RecAcctCode-option-6').click()
+    .get('#RecAcctCode-RecAcctCode-option-6').click()
     cy.wait(1000);
     cy.get(':nth-child(13) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#FrgtAcctCode-FrgtAcctCode-option-5').click()
+    .get('#FrgtAcctCode-FrgtAcctCode-option-5').click()
     cy.wait(1000);
     cy.get(':nth-child(14) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#SaleAcctCode-SaleAcctCode-option-6').click()
+    .get('#SaleAcctCode-SaleAcctCode-option-6').click()
     cy.wait(1000);
     cy.get(':nth-child(15) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#DiscAcctCode-DiscAcctCode-option-1').click()
+    .get('#DiscAcctCode-DiscAcctCode-option-1').click()
     cy.wait(1000);
     cy.get(':nth-child(16) > div > .MuiFormControlLabel-root > .MuiTypography-root').click()
     cy.wait(1000);
@@ -85,28 +79,30 @@ export function Save() {
     // cy.wait(1000);
     cy.get('.MuiButtonGroup-root > :nth-child(2) > .MuiButtonBase-root').click()
     cy.wait(1000);
+    })
 }
 export function Clear() {
-    var CPCode = "88" + new Date().getMilliseconds() 
+    cy.fixture('CustProfiles').then((payload) => {
+        const CPCode = payload.validData.CPCode;
+        const CP = payload.validData.CP;
+        const CL = payload.validData.CL;
     cy.get('.MuiContainer-root > .MuiFab-root').click()
     cy.wait(1000);
     cy.get('#CPCode').type(CPCode)
     cy.wait(1000);
-    cy.get('#CP').type('Customer')
+    cy.get('#CP').type(CP)
     cy.wait(1000);
-    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').type('787')
+    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').clear()
+    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').type(CL)
     cy.wait(1000);
     cy.get(':nth-child(4) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#PayTermDesc-undefined-option-1').click()
+    .get('#PayTermDesc-undefined-option-1').click()
     cy.wait(1000);
     cy.get(':nth-child(5) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#collector-undefined-option-1').click()
+    .get('#collector-undefined-option-1').click()
     cy.wait(1000);
     cy.get(':nth-child(6) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#salePer-undefined-option-1').click()
+    .get('#salePer-undefined-option-1').click()
     cy.wait(1000);
     cy.get(':nth-child(16) > div > .MuiFormControlLabel-root > .MuiTypography-root').click()
     cy.wait(1000);
@@ -116,9 +112,14 @@ export function Clear() {
     cy.wait(1000);
     cy.get('.MuiButtonGroup-root > .MuiButtonBase-root').click()
     cy.wait(1000);
+    })
 }
 
 export function Edit() {
+    cy.fixture('CustProfiles').then((payload) => {
+        const CP = payload.validData.CP;
+        const CL = payload.validData.CL;
+
     cy.get('.MuiButtonGroup-root > .MuiButtonBase-root').click()
     cy.wait(1000);
     cy.get('[index="4"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
@@ -127,28 +128,26 @@ export function Edit() {
     cy.wait(2000);
     cy.get('#CP').clear()
     cy.wait(1000);
-    cy.get('#CP').type('test')
+    cy.get('#CP').type(CP)
     cy.wait(1000);
-    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').type('200')
+    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').clear()
+    cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').type(CL)
     cy.wait(1000);
     cy.get(':nth-child(4) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#PayTermDesc-undefined-option-0').click()
+    .get('#PayTermDesc-undefined-option-0').click()
     cy.wait(1000);
     cy.get(':nth-child(5) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#collector-undefined-option-1').click()
+    .get('#collector-undefined-option-1').click()
     cy.wait(1000);
     cy.get(':nth-child(6) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#salePer-undefined-option-0').click()
+    .get('#salePer-undefined-option-0').click()
     cy.wait(1000);
     cy.get(':nth-child(15) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#DiscAcctCode-DiscAcctCode-option-0').click()
+    .get('#DiscAcctCode-DiscAcctCode-option-0').click()
     cy.wait(1000);
     cy.get('.MuiButtonGroup-root > :nth-child(2) > .MuiButtonBase-root').click()
     cy.wait(1000);
+    })
 }
 
 export function View() {

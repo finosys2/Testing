@@ -1,0 +1,14 @@
+{
+    "FormName": "CustomerProfile",
+
+    "validData": {
+        "CPCode": "5454",
+        "CP": "Customer",
+        "CL": "130"
+    },
+    "invalidData":{
+        "CPCode": "",
+        "CP": "Customer",
+        "CL": "130"
+    }
+}

@@ -1,7 +1,7 @@
-import { Login } from '../Login.cy.js';
+import { Login } from '../../../Login.cy.js';
 
-describe('Customer Receipt', () => {
-    it('Customer Receipt CRUD', () => {
+describe('Customer Invoice', () => {
+    it('Customer Invoice CRUD', () => {
         // cy.visit('http://localhost:1750')
         Login();
         Save();       
@@ -12,34 +12,55 @@ describe('Customer Receipt', () => {
         Post();
     })
 })
+
 export function Save() {
-    cy.visit('http://40.81.28.195:1550/Financials/Transaction/CustomerReceipt')
+    cy.fixture('CustInvoice').then((payload) => {
+        const  Description  = payload.validData.Description;
+        const  Ref  = payload.validData.Ref;
+        const  Discount  = payload.validData.Discount;
+        const  Freight  = payload.validData.Freight;
+        const  UOP  = payload.validData.UOP;
+        const  Tax  = payload.validData.Tax;
+        const  Desc  = payload.validData.Desc;
+
+    cy.visit('http://40.81.28.195:1550/Financials/Transaction/CustomerInvoice')
     cy.wait(2000);
     cy.get('.MuiContainer-root > .MuiFab-root').click()
     cy.wait(1000);
     cy.get('.MuiGrid-grid-xs-true > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click()
+    .get('#Invoice-cardInfo-option-0').click()
     cy.wait(1000);
-    cy.get('#Invoice-cardInfo-option-0').click()
+    cy.get('#Description').type(Description, { force: true }).blur()
     cy.wait(1000);
-    cy.get('#Description').type('description')
+    cy.get('#Ref').type(Ref, { force: true }).blur()
     cy.wait(1000);
+    cy.get('#mui-37').clear()
+    cy.get('#mui-37').type(Discount, { force: true }).blur()
+    cy.wait(1000);
+    cy.get(':nth-child(5) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click()
+    .get('#Invoice-cardInfo-option-1').click()
+    cy.wait(1000);
+    cy.get('#mui-38').clear()
+    cy.get('#mui-38').type(Freight, { force: true }).blur()
     cy.get(':nth-child(3) > .MuiGrid-container > :nth-child(1) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click()
+    .get('#Invoice-cardInfo-option-1').click()
     cy.wait(1000);
-    cy.get('#Invoice-cardInfo-option-2').click()
+    cy.get('[style="color: inherit; width: 25%; max-width: 25%; box-sizing: border-box; font-size: inherit; font-family: inherit; font-weight: inherit; text-align: center;"] > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click()
+    .get('#aactCode-paymentEntry-option-4').click()
     cy.wait(1000);
-    cy.get(':nth-child(2) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click()
+    cy.get('#mui-43').clear()
+    cy.get('#mui-43').type(UOP, { force: true }).blur()
     cy.wait(1000);
-    cy.get('#Invoice-cardInfo-option-3').click()
+    cy.get('#mui-46').clear()
+    cy.get('#mui-46').type(Tax, { force: true }).blur()
     cy.wait(1000);
-    cy.get(':nth-child(6) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click()
-    cy.wait(1000);
-    cy.get('#Invoice-cardInfo-option-2').click()
-    cy.wait(1000);
-    cy.get('#mui-35').type('12')
+    cy.get('#mui-47').type(Desc, { force: true }).blur()
     cy.wait(1000);
     cy.get('.MuiButtonGroup-root > :nth-child(2) > .MuiButtonBase-root').click()
     cy.wait(1000);
+    })
 }
+
 export function View() {
     cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(2000);
@@ -48,26 +69,28 @@ export function View() {
     cy.get('.MuiButtonGroup-root > .MuiButtonBase-root').click()
     cy.wait(1000);
 }
-
 export function Edit() {
-    cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.fixture('CustCat').then((payload) => {
+        const Description = payload.validData.Description;
+    
+    cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(2000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
     cy.wait(2000);
     cy.get('#Description').clear()
     cy.wait(1000);
-    cy.get('#Description').type('erum')
+    cy.get('#Description').type(Description)
     cy.wait(1000);
-    cy.get('.MuiGrid-grid-xs-true > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click()
+    cy.get(':nth-child(5) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click()
     cy.wait(1000);
-    cy.get('#Invoice-cardInfo-option-1').click()
+    cy.get('#Invoice-cardInfo-option-2').click()
     cy.wait(1000);
     cy.get('.MuiButtonGroup-root > :nth-child(2) > .MuiButtonBase-root').click()
     cy.wait(1000);
+    })
 }
-
 export function Delete() {
-    cy.get('[index="3"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(2000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
     cy.wait(2000);
@@ -90,6 +113,7 @@ export function Download() {
     cy.get('.css-10nakn3-MuiModal-root-MuiPopover-root-MuiMenu-root > .MuiPaper-root > .MuiList-root > [tabindex="-1"]').click()
     cy.wait(2000);
 }
+
 export function Post() {
     cy.get('[index="3"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(2000);

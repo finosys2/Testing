@@ -1,9 +1,2 @@
-import {CareOf} from './CareOf.cy.js';
-import {CustomerCategories} from './CustomerCategories.cy.js';
-import {DonorRegistration} from './DonorRegistration.cy.js';
-import {Campaign} from './Campaign.cy.js';
-import {Customers} from './Customers.cy.js';
-import {CustomerProfiles} from "./CustomerProfiles.cy.js";
-import {DonorReceipts} from "./DonorReceipts.cy.js";
-import {CustomerReceipt} from "./CustomerReceipt.cy.js";
-import {CustomerInvoice} from "./CustomerInvoice.cy.js";
+import { Profit } from "./Profit/index.cy";
+import { Receivable } from "./Receivable/index.cy";

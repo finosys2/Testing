@@ -1,4 +1,4 @@
-import { Login } from '../Login.cy.js';
+import { Login } from '../../../Login.cy.js';
 
 describe('Campaign', () => {
     it('Campaign CRUD', () => {
@@ -15,8 +15,8 @@ describe('Campaign', () => {
 
 export function Save() {
     cy.fixture('Campaign').then((payload) => {
-        const { CampaignCode } = payload.Header;
-        const { Campaign } = payload.Header;
+        const CampaignCode = payload.validData.CampaignCode;
+        const Campaign = payload.validData.Campaign;
         cy.visit('http://40.81.28.195:1550/Financials/Setup/Campaigns')
         cy.wait(2000);
         cy.get('#root > div > main > div > div.MuiButtonBase-root.MuiFab-root.MuiFab-circular.MuiFab-sizeLarge.MuiFab-secondary.MuiFab-root.MuiFab-circular.MuiFab-sizeLarge.MuiFab-secondary.css-12itd30-MuiButtonBase-root-MuiFab-root').click()
@@ -37,7 +37,7 @@ export function Save() {
 }
 export function Edit() {
     cy.fixture('Campaign').then((payload) => {
-        const { Campaign } = payload.Header;
+        const Campaign = payload.validData.Campaign;
         cy.get('[index="4"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
         cy.wait(2000);
         cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()

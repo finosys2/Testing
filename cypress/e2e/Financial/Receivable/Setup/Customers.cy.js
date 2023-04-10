@@ -1,4 +1,4 @@
-import { Login } from '../Login.cy.js';
+import { Login } from '../../../Login.cy.js';
 
 describe('Customers', () => {
     it('Customers CRUD', () => {
@@ -14,11 +14,11 @@ describe('Customers', () => {
 })
 
 export function Save() {
-    cy.fixture('CareOf').then((payload) => {
-        const { CustomerCode } = payload.Header;
-        const { Customer } = payload.Header;
-        const { Alias } = payload.Header;
-        const { NTN } = payload.Header;
+    cy.fixture('Customers').then((payload) => {
+        const CustomerCode = payload.validData.CustomerCode;
+        const Customer = payload.validData.Customer;
+        const Alias = payload.validData.Alias;
+        const NTN = payload.validData.NTN;
 
         cy.visit('http://40.81.28.195:1550/Financials/Setup/Customers')
         cy.wait(2000);
@@ -33,30 +33,25 @@ export function Save() {
         cy.get('#mui-29').type(NTN)
         cy.wait(1000);
         cy.get(':nth-child(1) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-        cy.wait(1000);
-        cy.get('#Profile-undefined-option-1').click()
+        .get('#Profile-undefined-option-1').click()
         cy.wait(1000);
         cy.get(':nth-child(2) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-        cy.wait(1000);
-        cy.get('#PayTerm-PayTerm-option-1').click()
+        .get('#PayTerm-PayTerm-option-1').click()
         cy.wait(1000);
         cy.get(':nth-child(3) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-        cy.wait(1000);
-        cy.get('#ShipM-ShipM-option-1').click()
+        .get('#ShipM-ShipM-option-1').click()
         cy.wait(1000);
         cy.get(':nth-child(4) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-        cy.wait(1000);
-        cy.get('#CollectorDesc-undefined-option-0').click()
+        .get('#CollectorDesc-undefined-option-0').click()
         cy.wait(1000);
         cy.get(':nth-child(6) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-        cy.wait(1000);
-        cy.get('#orderBooker-undefined-option-0').click()
+        .get('#orderBooker-undefined-option-0').click()
         cy.wait(1000);
         cy.get(':nth-child(10) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
+        .get('#CurName-CurName-option-5').click()
         cy.wait(1000);
-        cy.get('#CurName-CurName-option-5').click()
-        cy.wait(1000);
-        cy.get('#mui-30').type('1312')
+        cy.get(':nth-child(16) > .NumberFormat > .MuiFormControl-root').clear()
+        cy.get(':nth-child(16) > .NumberFormat > .MuiFormControl-root').type('1000')
         cy.wait(1000);
         cy.get(':nth-child(17) > div > .MuiFormControlLabel-root').click()
         cy.wait(1000);
@@ -69,42 +64,42 @@ export function Save() {
     })
 }
 export function Edit() {
-    cy.get('.MuiButtonGroup-root > .MuiButtonBase-root').click()
-    cy.wait(1000);
-    cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
-    cy.wait(2000);
-    cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
-    cy.wait(2000);
-    cy.get('#Customer').clear()
-    cy.wait(1000);
-    cy.get('#Customer').type('customer')
-    cy.wait(1000);
-    cy.get('#Alias').clear()
-    cy.wait(1000);
-    cy.get('#Alias').type('alias')
-    cy.wait(1000);
-    cy.get(':nth-child(1) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#Profile-undefined-option-2').click()
-    cy.wait(1000);
-    cy.get(':nth-child(3) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#ShipM-ShipM-option-1').click()
-    cy.wait(1000);
-    cy.get(':nth-child(4) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#CollectorDesc-undefined-option-0').click()
-    cy.wait(1000);
-    cy.get(':nth-child(10) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
-    cy.wait(1000);
-    cy.get('#CurName-CurName-option-5').click()
-    cy.wait(1000);
-    cy.get(':nth-child(17) > div > .MuiFormControlLabel-root').click()
-    cy.wait(1000);
-    cy.get('.MuiBox-root > div > .MuiFormControlLabel-root > .MuiTypography-root').click()
-    cy.wait(1000);
-    cy.get('.MuiButtonGroup-root > :nth-child(2) > .MuiButtonBase-root').click()
-    cy.wait(1000);
+    cy.fixture('Customers').then((payload) => {
+        const Customer = payload.validData.Customer;
+        const Alias = payload.validData.Alias;
+        cy.get('.MuiButtonGroup-root > .MuiButtonBase-root').click()
+        cy.wait(1000);
+        cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+        cy.wait(2000);
+        cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
+        cy.wait(2000);
+        cy.get('#Customer').clear()
+        cy.wait(1000);
+        cy.get('#Customer').type(Customer)
+        cy.wait(1000);
+        cy.get('#Alias').clear()
+        cy.wait(1000);
+        cy.get('#Alias').type(Alias)
+        cy.wait(1000);
+        cy.get(':nth-child(1) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
+        .get('#Profile-undefined-option-2').click()
+        cy.wait(1000);
+        cy.get(':nth-child(3) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
+        .get('#ShipM-ShipM-option-1').click()
+        cy.wait(1000);
+        cy.get(':nth-child(4) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
+        .get('#CollectorDesc-undefined-option-0').click()
+        cy.wait(1000);
+        cy.get(':nth-child(10) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
+        .get('#CurName-CurName-option-5').click()
+        cy.wait(1000);
+        cy.get(':nth-child(17) > div > .MuiFormControlLabel-root').click()
+        cy.wait(1000);
+        cy.get('.MuiBox-root > div > .MuiFormControlLabel-root > .MuiTypography-root').click()
+        cy.wait(1000);
+        cy.get('.MuiButtonGroup-root > :nth-child(2) > .MuiButtonBase-root').click()
+        cy.wait(1000);
+    })
 }
 export function View() {
     cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()

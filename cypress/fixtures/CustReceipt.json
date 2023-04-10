@@ -1,0 +1,13 @@
+{
+    "FormName": "Receipt",
+    "validData": {
+        "Description": "ABC",
+        "Ref": "12",
+        "Pay": "20"
+    },
+    "invalidData": {
+        "Description": "ABC",
+        "Ref": "12",
+        "Pay": ""
+    }
+}

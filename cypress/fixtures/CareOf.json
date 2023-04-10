@@ -1,7 +1,12 @@
 {
     "FormName": "CareOf",
-    "Header": {
+
+    "validData": {
         "CareOfCode": "5454",
+        "CareOf": "testcase"
+    },
+    "invalidData":{
+        "CareOfCode": "",
         "CareOf": "testcase"
     }
 }

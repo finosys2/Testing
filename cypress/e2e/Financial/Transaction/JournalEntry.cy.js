@@ -4,13 +4,13 @@ describe('Journal Entry', () => {
     it('Journal Entry CRUD', () => {
         // cy.visit('http://localhost:1750')  
         Login();
-        // Save();
+        Save();
         // View();
         // Edit();
         // Download();   
-        Post();
-        print();
-        Delete();  
+        // Post();
+        // print();
+        // Delete();  
     })
 })
 export function Save() {
