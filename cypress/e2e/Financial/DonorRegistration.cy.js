@@ -16,7 +16,7 @@ describe('Donor Registration', () => {
 export function Save() {
     var DonorCode = "444" + new Date().getMilliseconds() 
     cy.visit('http://40.81.28.195:1550/Financials/Setup/DonorRegistration')
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.MuiContainer-root > .MuiFab-root').click()
     cy.wait(1000);
     cy.get('#mui-29').type(DonorCode)
@@ -59,9 +59,9 @@ export function Save() {
 
 export function Edit() {
     cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('#mui-90').click()
     cy.wait(1000);
     cy.get('.MuiPaper-root > .MuiList-root > .Mui-selected').click()
@@ -92,38 +92,38 @@ export function Edit() {
 
 export function View() {
     cy.visit('http://40.81.28.195:1550/Financials/Setup/DonorRegistration')
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(1)').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.MuiButtonGroup-root > .MuiButtonBase-root').click()
     cy.wait(1000);
 }
 
 export function Delete() {
     cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.MuiGrid-root > .MuiButton-contained').click()
     cy.wait(1000);
     cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.MuiButton-outlined').click()
     cy.wait(1000);
 }
 export function Download() {
     cy.get('.css-12re8tr > :nth-child(1) > :nth-child(1) > :nth-child(1) > .MuiButtonBase-root').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.css-10nakn3-MuiModal-root-MuiPopover-root-MuiMenu-root > .MuiPaper-root > .MuiList-root > [tabindex="0"]').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.css-12re8tr > :nth-child(1) > :nth-child(1) > :nth-child(1) > .MuiButtonBase-root').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.css-10nakn3-MuiModal-root-MuiPopover-root-MuiMenu-root > .MuiPaper-root > .MuiList-root > [tabindex="-1"]').click()
-    cy.wait(2000);
+    cy.wait(1000);
 }
 export function Search() {
     cy.get('#DonorCode').type('4447')

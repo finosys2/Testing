@@ -1,0 +1,34 @@
+{
+    "FormName": "Vendors",
+
+    "validData":{
+        "VendorCode": "002",
+        "Vendor": "ABC Enterprises",
+        "NTNNo": "08937862",
+        "STRegNo": "3085928931083",
+        "ContactPerson": "03333303789 , 03456109875",
+        "PhoneNo": "03333303789",
+        "Address": "xyz linelane",
+        "City": "Isl",
+        "Country": "Pakistan",
+        "PostCode": "34536",
+        "Email": "fghhd",
+        "Web": "ghhhg"
+
+    },
+
+    "invalidData":{
+        "VendorCode": "",
+        "Vendor": "",
+        "NTNNo": "",
+        "STRegNo": "3085928931083",
+        "ContactPerson": "",
+        "PhoneNo": "",
+        "Address": "xyz linelane",
+        "City": "Isl",
+        "Country": "Pakistan",
+        "PostCode": "34536",
+        "Email": "fghhd",
+        "Web": "ghhhg"
+    }
+}

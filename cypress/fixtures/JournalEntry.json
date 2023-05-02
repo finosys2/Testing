@@ -1,0 +1,14 @@
+{
+    "FormName": "Journal",
+    
+    "validData":{
+        "JrnlDesc": "noted",
+        "JrnlTotCr": "4580",
+        "JrnlTotDr": "4580"
+    },
+    "InvalidData":{
+        "JrnlDesc": "noted",
+        "JrnlTotCr": "4580",
+        "JrnlTotDr": "580"
+    }
+}

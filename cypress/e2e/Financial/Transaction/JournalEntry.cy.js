@@ -15,7 +15,7 @@ describe('Journal Entry', () => {
 })
 export function Save() {
     cy.visit('http://40.81.28.195:1550/Financials/Transaction/JournalEntry')
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.css-11lq3yg-MuiGrid-root > .MuiFab-root').click()
     cy.wait(1000);
     cy.get('.MuiStack-root > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').click()
@@ -28,7 +28,7 @@ export function Save() {
     cy.wait(1000);
     cy.get('#aactCode-paymentEntry-option-0').click()
     cy.wait(1000);
-    cy.get('#mui-49').type('20000')
+    cy.get('#mui-49').type('10000')
     cy.wait(1000);
     cy.get('[index="0"] > [style="color: inherit; width: 15%; box-sizing: border-box; font-size: inherit; font-family: inherit; font-weight: inherit;"]').click()
     cy.wait(1000);
@@ -38,7 +38,7 @@ export function Save() {
     cy.wait(1000);
     cy.get('#aactCode-paymentEntry-option-0').click()
     cy.wait(1000);
-    cy.get('#mui-54').type('20000')
+    cy.get('#mui-54').type('10000')
     cy.wait(1000);
     cy.get('.MuiButtonGroup-root > :nth-child(1) > .MuiButtonBase-root').click()
     cy.wait(7000);
@@ -84,7 +84,7 @@ export function Download() {
 }
 export function Post() {
     cy.visit('http://40.81.28.195:1550/Financials/Transaction/JournalEntry')
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(1000);
     cy.get('.MuiList-root > :nth-child(4)').click()

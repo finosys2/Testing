@@ -1,0 +1,13 @@
+{
+    "FormName": "LCCategories",
+
+    "validData":{
+        "CatCode": "101",
+        "CatDesc": "Cat expenses description"
+    },
+
+    "invalidData":{
+        "CatCode": "",
+        "CatDesc": ""
+    }
+}

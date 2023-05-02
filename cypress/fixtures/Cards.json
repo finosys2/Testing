@@ -3,7 +3,6 @@
 
     "validData":{ 
         "CardCode": "007",
-        "CardType": "Employee",
         "Phone1": "03333303789",
         "CardName": "Arabish",
         "Address": "xyz Area ",

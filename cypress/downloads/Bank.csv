@@ -1,0 +1,5 @@
+﻿"Bank Code","Bank Name","Bank Type","Bank AC","Is Active"
+"Cash In Hand","Cash In Hand","Cash","",true
+"Bank 1","Bank 1","PDC","0",true
+"Bank 2","Bank 2","Bank","0",true
+"BAH12","Bank Al-Habib","Cash","2944585201309",false

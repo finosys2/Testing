@@ -1,21 +1,20 @@
 import { Login } from '../../../Login.cy.js';
+
 describe('Bank', () => {
     it('Bank CRUD', () => {
-        // cy.visit('http://localhost:1750')
         Login();
         Save();
         View();
         Edit();
         Download();
+        Search();
         Delete();
     })
 })
 export function Save() {
-    //var bank = "BOA" + new Date().getMilliseconds();
-    //cy.visit('http://localhost:1750/Financials/Setup/Bank')
     //cy.visit('http://40.81.28.195:1550/Financials/Setup/Bank')
     cy.visit('http://192.168.19.97:1750/Financials/Setup/Bank')
-    cy.wait(2000);
+    cy.wait(1000);
     cy.fixture('Bank.json').then((payload) => {
         console.log({payload: payload.validData})
         const BankCode  = payload.validData.BankCode
@@ -24,7 +23,7 @@ export function Save() {
         const NextChequeNo = payload.validData.NextChequeNo
         const ReportName = payload.validData.ReportName
     cy.get('[aria-label="Add New"]').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('#mui-18').type(BankCode, { force: true }).blur()
     cy.wait(1000);
     cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInput-root > #BankName')
@@ -54,11 +53,11 @@ export function Save() {
 }
 export function View() {
     cy.get('[index="3"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > [tabindex="0"]').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > .MuiButton-root').click()
-    cy.wait(2000);
+    cy.wait(1000);
 }
 export function Edit() {
     cy.fixture('Bank.json').then((payload) => {
@@ -73,7 +72,8 @@ export function Edit() {
     cy.wait(1000);
     cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInput-root > #BankName').clear()
     cy.wait(1000);
-    cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInput-root > #BankName').type(BankName, { force: true })
+    cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInput-root > #BankName').
+    type(BankName, { force: true })
     cy.wait(1000);
     cy.get(':nth-child(3) > .css-1p5q5e5-MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root')
     .click().get('#CurName-undefined-option-0').click()
@@ -94,30 +94,38 @@ export function Edit() {
     .type(ReportName)
     cy.wait(1000);
     cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(2)').click()
-    cy.wait(2000);
+    cy.wait(1000);
 })
 }
 export function Download() {
     cy.get('.css-12re8tr > :nth-child(1) > :nth-child(1) > :nth-child(1) > .MuiButtonBase-root').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.css-10nakn3-MuiModal-root-MuiPopover-root-MuiMenu-root > .MuiPaper-root > .MuiList-root > [tabindex="0"]').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.css-12re8tr > :nth-child(1) > :nth-child(1) > :nth-child(1) > .MuiButtonBase-root').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.css-10nakn3-MuiModal-root-MuiPopover-root-MuiMenu-root > .MuiPaper-root > .MuiList-root > [tabindex="-1"]').click()
-    cy.wait(2000);
+    cy.wait(1000);
+}
+export function Search() {
+    cy.get('#BankCode').type('Bank')
+    cy.wait(1000);
+    cy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > #BankName').type('Bank')
+    cy.wait(1000);
+    cy.get('#BankCode').clear()
+    cy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > #BankName').clear()
 }
 export function Delete() {
     cy.get('[index="3"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.MuiButton-outlined').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('[index="3"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.MuiGrid-root > .MuiButton-contained').click()
-    cy.wait(2000);
+    cy.wait(1000);
 }

@@ -13,7 +13,7 @@ describe('Bank Transfer ', () => {
 })
 export function Save(){
 cy.visit('http://40.81.28.195:1550/Financials/Transaction/BankTransfers')
-cy.wait(2000);
+cy.wait(1000);
 cy.get('.MuiGrid-root > .MuiFab-root').click()
 cy.wait(1000);
 cy.get('#Decription').type('payment Transfer')

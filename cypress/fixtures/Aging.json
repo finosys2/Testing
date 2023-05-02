@@ -3,7 +3,10 @@
 
   "validData": {
     "AgBkCode": "0032",
-    "AgBkDesc": "32 DAY BUCKET"
+    "AgBkDesc": "32 DAY BUCKET",
+    "AgBkDesc1": "32 DAY BUCKET UPDATED",
+    "AgName":"previous dues",
+    "AgDays":"29"
   },
 
   "invalidData": {

@@ -1,11 +1,9 @@
-import { Login } from '../Login.cy.js';
+import { Login } from '../../Login.cy.js';
 
 describe('Vendors', () => {
     it('Vendors CRUD', () => {
-        // cy.visit('http://localhost:1750')
         Login();
         Save();
-        //Clear();
         View();
         Edit(); 
         Download();

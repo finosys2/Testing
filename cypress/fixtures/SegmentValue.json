@@ -1,0 +1,14 @@
+{
+    "FormName": "Seg1",
+
+    "validData":{
+        "VSCode": "005",
+        "VSDesc": "Seg search",
+        "VSDescEdit": "Seg search edit"
+    },
+
+    "invalidData":{
+        "VSCode": "",
+        "VSDesc": "Seg search"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "FormName": "LCCode",
+
+    "validData":{
+        "LCCode": "358sd9isaj",
+        "LCDesc": "adAAEFGSDA",
+        "VenBankName": "alfalah",
+        "VendorName": "rafay",
+        "BankName": "Bank Al-Habib"
+    },
+
+    "invalidData":{
+        "LCCode": "",
+        "LCDesc": "",
+        "VenBankName": "Meezan",
+        "VendorName": "ramsha",
+        "BankName": "Bank Al-Habib"
+    }
+}

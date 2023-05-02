@@ -3,7 +3,9 @@
      
     "validData":{
         "JobCode": "09000",
-        "JobDesc": "job limitation desc"
+        "JobCode1": "23890",
+        "JobDesc": "job limitation desc",
+        "JobDesc1": "job descriptions"
     },
 
     "invalidData":{

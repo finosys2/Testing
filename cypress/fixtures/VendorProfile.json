@@ -1,0 +1,19 @@
+{
+    "FormName": "VendorProfiles",
+
+    "validData":{
+        "VendProfileCode": "0092",
+        "VendProfileDesc": "shipppp",
+        "CreditLimit": "100000.00",
+        "FinChInterestRate": "500.00",
+        "PayTermCode": "300"
+    },
+
+    "invalidData":{
+        "VendProfileCode": "",
+        "VendProfileDesc": "",
+        "CreditLimit": "100000.00",
+        "FinChInterestRate": "500.00",
+        "PayTermCode": "300"
+    }
+}

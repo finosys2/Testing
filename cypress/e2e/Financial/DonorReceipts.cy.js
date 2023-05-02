@@ -15,7 +15,7 @@ describe('Donor Receipt', () => {
 export function Save() {
     var CareOfCode = "54" + new Date().getMilliseconds() 
     cy.visit('http://40.81.28.195:1550/Financials/Transaction/DonorReceipts')
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.MuiContainer-root > .MuiFab-root').click()
     cy.wait(1000);
     cy.get('#mui-17 ').type(CareOfCode)

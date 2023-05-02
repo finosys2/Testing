@@ -15,7 +15,7 @@ describe('Journal Payment ', () => {
 })
 export function Save() {
     cy.visit('http://40.81.28.195:1550/Financials/Transaction/JournalPayment')
-    cy.wait(2000);
+    cy.wait(1000);
     cy.get('.css-11lq3yg-MuiGrid-root > .MuiFab-root').click()
     cy.wait(1000);
     cy.get('.MuiStack-root > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').click()
@@ -33,7 +33,7 @@ export function Save() {
     cy.get('#aactCode-paymentEntry-option-1').click()
     cy.wait(1000);
     cy.get('#mui-49').clear()
-    cy.get('#mui-49').type('20000')
+    cy.get('#mui-49').type('10000')
     cy.wait(1000);
     // cy.get('[index="0"] > [style="color: inherit; width: 20%; box-sizing: border-box; font-size: inherit; font-family: inherit; font-weight: inherit; text-align: center;"] > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click()
     // cy.wait(1000);
@@ -55,7 +55,7 @@ export function View() {
 }
 export function Edit() {
     // cy.visit('http://40.81.28.195:1550/Financials/Transaction/JournalPayment')
-    // cy.wait(2000);
+    // cy.wait(1000);
     cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()

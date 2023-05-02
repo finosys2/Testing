@@ -1,0 +1,19 @@
+{
+    "FormName": "ExtendedJobs",
+
+    "validData":{
+        "JobCode": "ABC-12345",
+        "JobDesc": "marketing purpose",
+        "TentativeAmountBuy": 799,
+        "TentativeAmountSel": 899,
+        "TentativeAmountOp": 999
+    },
+
+    "invalidData":{
+        "JobCode": "",
+        "JobDesc": "marketing purpose",
+        "TentativeAmountBuy": "",
+        "TentativeAmountSel": "",
+        "TentativeAmountOp": ""
+    }
+}

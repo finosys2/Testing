@@ -3,11 +3,13 @@
 
     "validData":{
         "CustTerCode": "006",
-        "CustTer": "notify terDesc"   
+        "CustTer": "notify terDesc",
+        "CustTer1" : "clifton phase5" 
     },
 
     "invalidData":{
         "CustTerCode": "",
-        "CustTer": "notify"  
+        "CustTer": "notify",
+        "CustTer1" : "clifton phase5"   
     }
 }

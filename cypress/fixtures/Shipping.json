@@ -3,7 +3,8 @@
 
     "validData":{
         "ShippingMethodCode": "0090",
-        "ShippingMethodDesc": "By ship area"
+        "ShippingMethodDesc": "By ship area",
+        "ShippingMethodDesc1": "By air"
     },
 
     "invalidData":{
