@@ -12,7 +12,7 @@ describe('LCCategories', () => {
 })
 export function Save(){
 //cy.visit('http://40.81.28.195:1550/Financials/Setup/LCCatetories')
-cy.visit('http://192.168.19.97:1750/Financials/Setup/LCCatetories')
+cy.visit('http://40.81.28.195:1110/Financials/Setup/LCCatetories')
 cy.wait(1000);
 cy.fixture('LCCategories.json').then((payload) => {
     const CatCode = payload.validData.CatCode

@@ -2,13 +2,17 @@
     "FormName": "Journal",
     
     "validData":{
-        "JrnlDesc": "noted",
+        "JrnlDesc": "Voided Entry # JV-000097 | rim",
         "JrnlTotCr": "4580",
-        "JrnlTotDr": "4580"
+        "JrnlTotDr": "4580",
+        "JrnlTotDrEdit": "358",
+        "JrnlTotCrEd": "1000",
+        "LineDesc": "Voided Entry # JV-000097 | "
     },
     "InvalidData":{
         "JrnlDesc": "noted",
         "JrnlTotCr": "4580",
-        "JrnlTotDr": "580"
+        "JrnlTotDr": "580",
+        "LineDesc": "Voided Entry # JV-000097 | "
     }
 }

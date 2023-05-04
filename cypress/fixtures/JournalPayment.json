@@ -1,0 +1,20 @@
+{
+    "FormName": "JournalPayments",
+
+    "validData":{
+        "CheckDocNo": "0998395397113",
+        "LineDesc": "sales tax include",
+        "LineDr": "800",
+        "LineDrEd": "560",
+        "CatDesc": "abcdef",
+        "LandedAmount":"2000",
+        "CatDescEd":"Test payment"
+    },
+
+    "InvalidData":{
+        "CheckDocNo": "0998395397113",
+        "LineDesc": "sales tax include",
+        "LineDr": " ",
+        "CatDesc": "abcdef"
+    }
+}

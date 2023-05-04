@@ -14,7 +14,7 @@ describe('Vendor Profile ', () => {
 })
 export function Save() {
     // var ProfileCode = '001' + new Date().getMilliseconds();
-cy.visit('http://40.81.28.195:1550/Financials/Setup/VendorProfiles')
+cy.visit('http://40.81.28.195:1110/Financials/Setup/VendorProfiles')
 cy.wait(1000);
 cy.fixture('VendorProfile.json').then((payload) => {
     console.log({payload: payload.validData})

@@ -5,16 +5,16 @@ describe('Vendors ', () => {
        
         Login();  
         Save(); 
-        // View();  
-        // Edit();   
-        // Download(); 
-        // Search();  
-        // Delete();  
+        View();  
+        Edit();   
+        Download(); 
+        Search();  
+        Delete();  
     })  
 })
 export function Save(){
     //cy.visit('http://40.81.28.195:1550/Financials/Setup/Vendors')
-    cy.visit('http://192.168.19.97:1750/Financials/Setup/Vendors')
+    cy.visit('http://40.81.28.195:1110/Financials/Setup/Vendors')
     cy.wait(1000);
     cy.fixture('Vendors.json').then((payload) => {
         const VendorCode = payload.validData.VendorCode

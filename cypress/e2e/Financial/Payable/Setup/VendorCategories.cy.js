@@ -13,7 +13,7 @@ describe('Vendor Categories ', () => {
     })
 })
 export function Save() {
-    cy.visit('http://40.81.28.195:1550/Financials/Setup/VendorCategories')
+    cy.visit('http://40.81.28.195:1110/Financials/Setup/VendorCategories')
     //cy.visit('http://localhost:1750/Financials/Setup/VendorCategories')
     cy.wait(1000);
     cy.fixture('VendorCategories.json').then((payload) => {

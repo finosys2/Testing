@@ -1,0 +1,15 @@
+{
+    "FormName": "BankTransfer",
+
+    "validData":{
+        "BTrfDesc": "paisa transfer",
+        "DstBTrfAmount": "10000",
+        "DstBTrfAmountCur": "10000"
+    },
+
+    "invalidData":{
+        "BTrfDesc": "paisa transfer",
+        "DstBTrfAmount": "",
+        "DstBTrfAmountCur": ""
+    }
+}
