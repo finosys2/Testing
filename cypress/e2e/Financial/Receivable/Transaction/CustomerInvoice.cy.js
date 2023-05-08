@@ -23,25 +23,25 @@ export function Save() {
         const  Tax  = payload.validData.Tax;
         const  Desc  = payload.validData.Desc;
 
-    cy.visit('http://40.81.28.195:1550/Financials/Transaction/CustomerInvoice')
+    cy.visit('http://40.81.28.195:1110/Financials/Transaction/CustomerInvoice')
     cy.wait(2000);
-    cy.get('.MuiContainer-root > .MuiFab-root').click()
+    cy.get('[aria-label="Add New"]').click()
     cy.wait(1000);
     cy.get('.MuiGrid-grid-xs-true > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click()
     .get('#Invoice-cardInfo-option-0').click()
     cy.wait(1000);
-    cy.get('#Description').type(Description, { force: true }).blur()
+    cy.get('#CustInv-CardCont-SaleDesc').type(Description, { force: true }).blur()
     cy.wait(1000);
-    cy.get('#Ref').type(Ref, { force: true }).blur()
+    cy.get('#CustInv-CardCont-VenRefNo').type(Ref, { force: true }).blur()
     cy.wait(1000);
-    cy.get('#mui-37').clear()
-    cy.get('#mui-37').type(Discount, { force: true }).blur()
+    cy.get('#mui-70').clear()
+    cy.get('#mui-70').type(Discount, { force: true }).blur()
     cy.wait(1000);
     cy.get(':nth-child(5) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click()
     .get('#Invoice-cardInfo-option-1').click()
     cy.wait(1000);
-    cy.get('#mui-38').clear()
-    cy.get('#mui-38').type(Freight, { force: true }).blur()
+    cy.get('#mui-71').clear()
+    cy.get('#mui-71').type(Freight, { force: true }).blur()
     cy.get(':nth-child(3) > .MuiGrid-container > :nth-child(1) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root > .MuiInputBase-root').click()
     .get('#Invoice-cardInfo-option-1').click()
     cy.wait(1000);

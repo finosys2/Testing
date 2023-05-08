@@ -1,0 +1,14 @@
+{
+    "FormName": "Requisition",
+
+    "validData": {
+        "Ref": "54",
+        "Freight": "10",
+        "CL": "130"
+    },
+    "invalidData":{
+        "Ref": "",
+        "Freight": "10",
+        "CL": "130"
+    }
+}
