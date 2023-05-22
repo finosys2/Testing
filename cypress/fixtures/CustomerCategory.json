@@ -1,0 +1,12 @@
+{
+    "FormName": "CustomerCategory",
+
+    "validData": {
+        "CustCatCode": "1212",
+        "CustCat": "customer"
+    },
+    "invalidData": {
+        "CustCatCode": "1212",
+        "CustCat": ""
+    }
+}

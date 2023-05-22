@@ -1,0 +1,26 @@
+{
+    "FormName": "Item",
+
+    "validData":{
+        "ItemCode": "0011",
+        "Item": "dry fruits",
+        "Description": "want to add item in bucket",
+        "LSTPPRICE": "200",
+        "RetailPrice": "180",
+        "TradePrice": "220",
+        "SalesPrice": "250",
+        "UnitQuantity":"30",
+        "Tolerance": "40"
+    },
+
+    "invalidData":{
+        "ItemCode": "",
+        "Item": "",
+        "Description": "want to add item in bucket",
+        "LSTPPRICE": "",
+        "RetailPrice": "",
+        "TradePrice": "",
+        "SalesPrice": "250",
+        "Tolerance": "40"
+    }
+}

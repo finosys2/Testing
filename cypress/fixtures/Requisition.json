@@ -1,0 +1,19 @@
+{
+    "FormName": "Requisition",
+
+    "validData":{
+        "Description": "By ship area",
+        "Freight_Cur": "400",
+        "Packing_Quantity": "6",
+        "Price": "8000",
+        "Quantity": "10"
+    },
+
+    "invalidData":{
+        "Description": "By ship area",
+        "Freight_Cur": "",
+        "Packing_Quantity": "",
+        "Price": "",
+        "Quantity": "10"
+    }
+}

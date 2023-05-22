@@ -1,0 +1,19 @@
+{
+    "FormName": "Attributes",
+
+    "validData":{
+        "AttHeadCode": "KGS",
+        "AttHead": "ABC KGS",
+        "AttCode": "Weight",
+        "AttValue": "xyzKGs"
+
+    },
+
+    "invalidData":{
+        "AttHeadCode": "",
+        "AttHead": "ABC KGS",
+        "AttCode": "",
+        "AttValue": "xyzKGs"
+
+    }
+}

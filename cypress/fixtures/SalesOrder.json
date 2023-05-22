@@ -1,0 +1,19 @@
+{
+    "FormName": "SalesOrder",
+
+    "validData":{
+        "Description": "customer order note",
+        "Freight_Cur": "78",
+        "Discount_Cur": "21",
+        "Packing_Quantity": "40",
+        "Quantity": "70"
+    },
+
+    "inValidData":{
+        "Description": "customer order note",
+        "Freight_Cur": "",
+        "Discount_Cur": "",
+        "Packing_Quantity": "",
+        "Quantity": ""
+    }
+}

@@ -12,10 +12,8 @@ describe('Payment Modes', () => {
     })
 })
 export function Save() {
-    //var modeCode = "005" + new Date().getMilliseconds();
-    // cy.visit(`${apiUrl}Finaln`)
 //cy.visit('http://40.81.28.195:1550/Financials/Setup/PaymentModes')
-cy.visit('http://192.168.19.97:1750/Financials/Setup/PaymentModes')
+cy.visit('http://40.81.28.195:1110/Financials/Setup/PaymentTerms')
 cy.fixture('paymentModes.json').then((payload) => {
     console.log({payload: payload.validData})
     const PayModeCode  = payload.validData.PayModeCode
@@ -26,9 +24,9 @@ console.log({PayModeCode,PayModeDesc})
 cy.wait(1000);
 cy.get('[aria-label="Add New"]').click()
 cy.wait(1000);
-cy.get('#mui-18').type(PayModeCode, { force: true }).blur()
+cy.get('#PaymentTerms-PayTermCode').type(PayModeCode, { force: true }).blur()
 cy.wait(1000);
-cy.get('#mui-19').type(PayModeDesc, { force: true }).blur()
+cy.get('#PaymentTerms-PayTermDesc').type(PayModeDesc, { force: true }).blur()
 cy.wait(1000);
 cy.get('#alert-dialog-slide-description > div > div > div:nth-child(2) > div > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-2.css-1o7apob-MuiGrid-root > div > label > span.MuiCheckbox-root.MuiCheckbox-colorPrimary.MuiButtonBase-root.MuiCheckbox-root.MuiCheckbox-colorPrimary.PrivateSwitchBase-root.Mui-checked.css-wvbhqt-MuiButtonBase-root-MuiCheckbox-root > input').click()
 cy.wait(1000);
@@ -54,9 +52,8 @@ export function Edit() {
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
     cy.wait(1000);
-    cy.get('#mui-19').clear()
-    cy.wait(1000);
-    cy.get('#mui-19').type(PayModeDesc)
+    cy.get('#PaymentTerms-PayTermDesc').clear()
+    cy.get('#PaymentTerms-PayTermDesc').type(PayModeDesc)
     cy.wait(1000);
     cy.get('#alert-dialog-slide-description > div > div > div:nth-child(2) > div > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-2.css-1o7apob-MuiGrid-root > div > label > span.MuiCheckbox-root.MuiCheckbox-colorPrimary.MuiButtonBase-root.MuiCheckbox-root.MuiCheckbox-colorPrimary.PrivateSwitchBase-root.css-wvbhqt-MuiButtonBase-root-MuiCheckbox-root > input').click()
     cy.wait(1000);
@@ -75,11 +72,11 @@ export function Download() {
     cy.wait(1000);
 }
 export function Search() {
-    cy.get('#PayModeCode').type('00')
-    cy.get('#PayModeDesc').type('Cash')
+    cy.get('#PayTermCode').type('00')
+    cy.get('#PayTermDesc').type('Cash')
     cy.wait(1000);
-    cy.get('#PayModeCode').clear()
-    cy.get('#PayModeDesc').clear()
+    cy.get('#PayTermCode').clear()
+    cy.get('#PayTermDesc').clear()
 }
 export function Delete() {
     cy.get('[index="4"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()

@@ -1,0 +1,13 @@
+{
+    "FormName": "UOM",
+    
+    "validData":{
+        "BaseUOMCode": "Weight",
+        "UOMHeader"  : "10KG"
+    },
+
+    "InvalidData":{
+        "BaseUOMCode": "",
+        "UOMHeader"  : ""
+    }
+}

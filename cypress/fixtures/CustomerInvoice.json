@@ -1,0 +1,23 @@
+{
+    "FormName": "Sales",
+    "validData": {
+        "Description": "ABC",
+        "Ref": "12",
+        "Discount": "20",
+        "Freight": "100",
+        "UOP": "20",
+        "Tax": "10",
+        "Desc": "note",
+        "Quantity": "10",
+        "UnitPrice": "300"
+    },
+    "invalidData": {
+        "Description": "ABC",
+        "Ref": "12",
+        "Discount": "",
+        "Freight": "100",
+        "UOP": "0",
+        "Tax": "10",
+        "Desc": "nte"
+    }
+}

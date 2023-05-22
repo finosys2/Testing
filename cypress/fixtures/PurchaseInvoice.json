@@ -1,0 +1,20 @@
+{
+    "FormName": "PurchaseInvoice",
+
+    "validData":{
+        "Description": "Test invoice puchasing",
+        "Freight_Cur": "800",
+        "Discount_Cur": "30",
+        "Packing_Quantity": "18",
+        "Price": "1000",
+        "Quantity": "41"
+    },
+
+    "invalidData":{
+        "Description": "Test invoice puchasing",
+        "Freight_Cur": "",
+        "Packing_Quantity": "",
+        "Price": "",
+        "Quantity": "41"
+    }
+}

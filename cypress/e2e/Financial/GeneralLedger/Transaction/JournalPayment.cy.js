@@ -8,7 +8,7 @@ describe('Journal Payment', () => {
         Edit();
         Download();
         print();
-        // Post();
+        Post();
         Delete();
     })
 })  
@@ -37,8 +37,10 @@ export function Save() {
         cy.get('.MuiTableBody-root > .MuiTableRow-root > :nth-child(1)')
         .click().get('#aactCode-paymentEntry-option-1').click({force:true})
         cy.wait(1000);
-        cy.get('#mui-65').clear()
-        cy.get('#mui-65').type(LineDr)
+        cy.get('[index="0"] > :nth-child(2) > .NumberFormat > .MuiFormControl-root > .MuiInputBase-root > #GeneralPayment-LineDr')
+        .clear()
+        cy.get('[index="0"] > :nth-child(2) > .NumberFormat > .MuiFormControl-root > .MuiInputBase-root > #GeneralPayment-LineDr')
+        .type(LineDr)
         cy.wait(1000);
         //Tax lookup
         cy.get('[index="0"] > [style="color: inherit; width: 20%; box-sizing: border-box; font-size: inherit; font-family: inherit; font-weight: inherit; text-align: center;"]')
@@ -62,12 +64,14 @@ export function View() {
 
 }
 export function Edit() {
+    cy.visit('http://40.81.28.195:1110/Financials/Transaction/JournalPayment')
+    cy.wait(1000);
     cy.fixture('JournalPayment.json').then((payload) => {
         console.log({ payload: payload.validData })
         const CatDescEd = payload.validData.CatDescEd
         const LineDrEd = payload.validData.LineDrEd
         const LandedAmount = payload.validData.LandedAmount
-        cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root')
+        cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root')
         .click()
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()

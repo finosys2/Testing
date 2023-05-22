@@ -1,0 +1,19 @@
+{
+    "FormName": "GatePass",
+
+    "validData":{
+        "Remarks": "gatepass okk",
+        "DocumentNo": "Doc4490056",
+        "DriverContact": "03160281734",
+        "DriverName": "arsalan ",
+        "VehicleNo": "SDR1232"
+    },
+
+    "inValidData":{
+        "Remarks": "gatepass okk",
+        "DocumentNo": "",
+        "DriverContact": "",
+        "DriverName": "",
+        "VehicleNo": ""
+    }
+}

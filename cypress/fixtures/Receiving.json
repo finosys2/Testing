@@ -1,0 +1,13 @@
+{
+    "FormName": "Receiving",
+
+    "validData":{
+        "Description": "stock receiving details",
+        "Quantity": "4"
+    },
+
+    "invalidData":{
+        "Description": "",
+        "Quantity": ""
+    }
+}

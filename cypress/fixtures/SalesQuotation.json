@@ -1,0 +1,20 @@
+{
+    "FormName": "SalesQuote",
+
+    "validData":{
+        "Discount_Cur": "100",
+        "Freight_Cur": "300",
+        "Description":"Sales Quote Test", 
+        "Packing_Quantity": "30",
+        "Quantity": "20",
+        "Price": "30000"
+    },
+
+    "inValidData":{
+        "Discount_Cur": "100",
+        "Freight_Cur": "",
+        "Packing_Quantity": "",
+        "Quantity": "",
+        "Price": ""
+    }
+}

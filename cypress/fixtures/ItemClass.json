@@ -1,0 +1,15 @@
+{
+    "FormName": "ItemClass",
+
+    "validData":{
+        "ItemClassCode": "003",
+        "ItemClass": "rimsha Finosys",
+        "AttributeCode": "0300"
+    },
+
+    "invalidData":{
+        "ItemClassCode": "",
+        "ItemClass": "rimsha Finosys",
+        "AttributeCode": ""
+    }
+}

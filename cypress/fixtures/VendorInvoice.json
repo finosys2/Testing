@@ -1,0 +1,17 @@
+{
+    "FormName": "Purchases",
+
+    "validData":{
+        "VenRefNo": "09085355",
+        "Amount_Cur": "2500",
+        "UnitQuantity": "10",
+        "LineDescription": "xyzer"
+    },
+
+    "InvalidData":{
+        "VenRefNo": "09085355",
+        "Amount_Cur": "",
+        "UnitQuantity": "",
+        "LineDescription": "xyzer"
+    }
+}

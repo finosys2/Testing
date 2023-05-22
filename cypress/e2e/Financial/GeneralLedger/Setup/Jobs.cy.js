@@ -13,8 +13,8 @@ describe('Jobs', () => {
     })
 })
 export function Save() {
-    cy.visit('http://localhost:1750/Financials/Setup/Jobs')
-    cy.visit('http://192.168.19.97:1750/Financials/Setup/Jobs')
+    cy.visit('http://40.81.28.195:1110/Financials/Setup/Jobs')
+    //cy.visit('http://192.168.19.97:1750/Financials/Setup/Jobs')
     cy.wait(1000);
     cy.fixture('Jobs.json').then((payload) => {
         console.log({payload: payload.validData})
@@ -22,11 +22,9 @@ export function Save() {
         const JobDesc  = payload.validData.JobDesc
     cy.get('.MuiGrid-root > .MuiButtonBase-root').click()
     cy.wait(1000);
-    cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #JobCode')
-    .type(JobCode)
+    cy.get('#JobList-JobCode').type(JobCode)
     cy.wait(1000);
-    cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #JobDesc')
-    .type(JobDesc)
+    cy.get('#JobList-JobDesc').type(JobDesc)
     cy.wait(1000);
     cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(2)').click()
     cy.wait(7000);
@@ -52,8 +50,7 @@ export function Edit() {
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
     cy.wait(1000);
-    cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #JobDesc')
-    .type(JobDesc)
+    cy.get('#JobList-JobDesc').type(JobDesc)
 })}
 export function AddChild() {
     cy.fixture('Jobs.json').then((payload) => {
@@ -64,22 +61,18 @@ export function AddChild() {
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > [tabindex="0"]').click()
     cy.wait(1000);
-    cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #JobCode')
-    .type(JobCode1)
-    cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #JobDesc')
-    .type(JobDesc1)
+    cy.get('#JobList-JobCode').type(JobCode1)
+    cy.get('#JobList-JobDesc').type(JobDesc1)
     cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(2)').click()
     cy.wait(1000);
 })}
 export function Search() {
-    cy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > #JobCode')
-    .type('090')
+    cy.get('#JobCode').type('090')
     cy.wait(1000);
-    cy.get(':nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > #JobDesc')
-    .type('job')
+    cy.get('#JobDesc').type('job')
     cy.wait(1000);
-    cy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > #JobCode').clear()
-    cy.get(':nth-child(3) > .MuiFormControl-root > .MuiInputBase-root > #JobDesc').clear()
+    cy.get('#JobCode').clear()
+    cy.get('#JobDesc').clear()
 }
 export function Delete() {
     cy.get('[index="1"] > [style="width: 1%; padding: 0px 5px; box-sizing: border-box;"] > div > .MuiButtonBase-root').click()

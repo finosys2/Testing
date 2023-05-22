@@ -20,11 +20,9 @@ cy.fixture('LCCategories.json').then((payload) => {
 
 cy.get('[aria-label="Add New"]').click()
 cy.wait(1000);
-cy.get('.MuiGrid-container > :nth-child(1) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #CatCode')
-.type(CatCode)
+cy.get('#LCCatetories-CatCode').type(CatCode)
 cy.wait(1000);
-cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #CatDesc')
-.type(CatDesc)
+cy.get('#LCCatetories-CatDesc').type(CatDesc)
 cy.wait(1000);
 cy.get('.MuiAutocomplete-root > .MuiFormControl-root')
 .click().get('#AcctDesc-AcctDesc-option-5').click({force: true})
@@ -50,10 +48,8 @@ cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root')
 cy.wait(1000);
 cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
 cy.wait(1000);
-cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #CatDesc')
-.clear()
-cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #CatDesc')
-.type(CatDesc)
+cy.get('#LCCatetories-CatDesc').clear()
+cy.get('#LCCatetories-CatDesc').type(CatDesc)
 cy.wait(1000);
 cy.get('.MuiAutocomplete-root > .MuiFormControl-root')
 .click().get('#AcctDesc-AcctDesc-option-6').click({force: true})

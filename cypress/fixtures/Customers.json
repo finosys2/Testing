@@ -1,9 +1,23 @@
+
 {
     "FormName": "Customers",
-    "Header": {
+
+    "validData": {
+        "CustomerCode": "5482",
+        "Customer": "test customer",
+        "Alias": "Ali",
+        "NTN": "10889000",
+        "CreditLimit": "10000",
+        "FinChInterestRate":"400",
+        "MinInvValforFinCh":"850"
+    },
+    "invalidData": {
         "CustomerCode": "5454",
         "Customer": "testcase",
-        "Alias": "Alias",
-        "NTN": "10889000"
+        "Alias": "",
+        "NTN": "",
+        "CreditLimit": "10000",
+        "FinChInterestRate":"400",
+        "MinInvValforFinCh":"850"
     }
 }

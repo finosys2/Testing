@@ -13,7 +13,7 @@ describe('Bank', () => {
 })
 export function Save() {
     //cy.visit('http://40.81.28.195:1550/Financials/Setup/Bank')
-    cy.visit('http://192.168.19.97:1750/Financials/Setup/Bank')
+    cy.visit('http://40.81.28.195:1110/Financials/Setup/Bank')
     cy.wait(1000);
     cy.fixture('Bank.json').then((payload) => {
         console.log({payload: payload.validData})
@@ -24,10 +24,9 @@ export function Save() {
         const ReportName = payload.validData.ReportName
     cy.get('[aria-label="Add New"]').click()
     cy.wait(1000);
-    cy.get('#mui-18').type(BankCode, { force: true }).blur()
+    cy.get('#Banks-BankCode').type(BankCode, { force: true }).blur()
     cy.wait(1000);
-    cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInput-root > #BankName')
-    .type(BankName, { force: true }).blur()
+    cy.get('#Banks-BankName').type(BankName, { force: true }).blur()
     cy.wait(1000);
     cy.get(':nth-child(3) > .css-1p5q5e5-MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
     .get('#CurName-undefined-option-0').click({ force: true })
@@ -35,11 +34,11 @@ export function Save() {
     cy.get(':nth-child(5) > .css-1p5q5e5-MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root').click()
     .get('#Account-undefined-option-2').click({ force: true })
     cy.wait(1000);
-    cy.get(':nth-child(7) > :nth-child(1) > .MuiFormControl-root > .MuiInput-root > #AccNo').type(BankAC)
+    cy.get('#Banks-BankAC').type(BankAC)
     cy.wait(1000);
-    cy.get(':nth-child(8) > :nth-child(1) > .MuiFormControl-root > .MuiInput-root > #AccNo').type(NextChequeNo)
+    cy.get('#Banks-NextChequeNo').type(NextChequeNo)
     cy.wait(1000);
-    cy.get(':nth-child(9) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #AccNo').type(ReportName)
+    cy.get('#Banks-ReportName').type(ReportName)
     cy.wait(1000);
     cy.get('#alert-dialog-slide-description > div > div > div:nth-child(2) > div > div > div > div > div:nth-child(11) > div > label > span.MuiButtonBase-root.MuiCheckbox-root.MuiCheckbox-colorPrimary.PrivateSwitchBase-root.MuiCheckbox-root.MuiCheckbox-colorPrimary.Mui-checked.MuiCheckbox-root.MuiCheckbox-colorPrimary.css-wvbhqt-MuiButtonBase-root-MuiCheckbox-root > input').click()
     cy.wait(1000);
@@ -70,10 +69,8 @@ export function Edit() {
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
     cy.wait(1000);
-    cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInput-root > #BankName').clear()
-    cy.wait(1000);
-    cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInput-root > #BankName').
-    type(BankName, { force: true })
+    cy.get('#Banks-BankName').clear()
+    cy.get('#Banks-BankName').type(BankName, { force: true })
     cy.wait(1000);
     cy.get(':nth-child(3) > .css-1p5q5e5-MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root')
     .click().get('#CurName-undefined-option-0').click()
@@ -81,17 +78,11 @@ export function Edit() {
     cy.get(':nth-child(5) > .css-1p5q5e5-MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root')
     .click().get('#Account-undefined-option-4').click()
     cy.wait(1000);
-    cy.get(':nth-child(8) > :nth-child(1) > .MuiFormControl-root > .MuiInput-root > #AccNo')
-    .clear()
+    cy.get('#Banks-NextChequeNo').clear()
+    cy.get('#Banks-NextChequeNo').type(NextChequeNo, { force: true })
     cy.wait(1000);
-    cy.get(':nth-child(8) > :nth-child(1) > .MuiFormControl-root > .MuiInput-root > #AccNo')
-    .type(NextChequeNo, { force: true })
-    cy.wait(1000);
-    cy.get(':nth-child(9) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #AccNo')
-    .clear()
-    cy.wait(1000);
-    cy.get(':nth-child(9) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #AccNo')
-    .type(ReportName)
+    cy.get('#Banks-ReportName').clear()
+    cy.get('#Banks-ReportName').type(ReportName)
     cy.wait(1000);
     cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(2)').click()
     cy.wait(1000);

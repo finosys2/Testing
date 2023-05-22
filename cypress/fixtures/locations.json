@@ -1,0 +1,29 @@
+{
+    "FormName": "Locations",
+
+    "validData":{
+        "City": "karachi",
+        "ContactPerson": "03492453923",
+        "Country":  "Pakistan",
+        "Designation": "developer",
+        "Email": "abc@gmail.com",
+        "Location": "Malir cantt",
+        "LocationCode": "location 2",
+        "Province": "Sindh",
+        "Address1":"abc1",
+        "Address2":"xyz2",
+        "Address3":"add3",
+        "FaxNo":"123456"
+    },
+
+    "invalidData":{
+        "City": "karachi",
+        "ContactPerson": "",
+        "Country":  "Pakistan",
+        "Designation": "developer",
+        "Email": "abc@gmail.com",
+        "Location": "",
+        "LocationCode": "",
+        "Province": "Sindh"
+    }
+}

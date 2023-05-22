@@ -16,18 +16,15 @@ export function Save() {
     cy.visit('http://40.81.28.195:1110/Financials/Setup/VendorCategories')
     //cy.visit('http://localhost:1750/Financials/Setup/VendorCategories')
     cy.wait(1000);
-    cy.fixture('VendorCategories.json').then((payload) => {
-        console.log({payload: payload.validData})
-        const VendCategoryCode = payload.validData.VendCategoryCode
-        const VendCategoryDesc = payload.validData.VendCategoryDesc
+    cy.fixture('VendorCategory.json').then((payload) => {
+        const VendorCategoryCode = payload.validData.VendorCategoryCode
+        const VendorCategoryDesc = payload.validData.VendorCategoryDesc
 
     cy.get('[aria-label="Add New"]').click()
     cy.wait(1000);
-    cy.get('.MuiGrid-container > :nth-child(1) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #VendCategoryCode')
-    .type(VendCategoryCode)
+    cy.get('#VendorCategories-VendCategoryCode').type(VendorCategoryCode)
     cy.wait(1000);
-    cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #VendCategoryDesc')
-    .type(VendCategoryDesc)
+    cy.get('#VendorCategories-VendCategoryDesc').type(VendorCategoryDesc)
     cy.wait(1000);
     cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(2)').click()
     cy.wait(7000);
@@ -47,7 +44,7 @@ export function View() {
     cy.wait(6000);
 }
 export function Edit() {
-    cy.fixture('VendorCategories.json').then((payload) => {
+    cy.fixture('VendorCategory.json').then((payload) => {
         console.log({payload: payload.validData})
         const VendCategoryDesc1 = payload.validData.VendCategoryDesc1
     cy.get('[index="2"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()

@@ -1,0 +1,15 @@
+{
+    "FormName": "Payments",
+
+    "validData":{
+        "CheckDocNo": "45ffgh",
+        "OnAccountCur": "30000",
+        "OnAccountCurEd":"50000"
+    },
+
+    "invalidData":{
+        "CheckDocNo": "45ffgh",
+        "OnAccountCur": "",
+        "OnAccountCurEd":""
+    }
+}

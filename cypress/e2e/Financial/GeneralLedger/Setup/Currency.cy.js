@@ -13,7 +13,7 @@ describe('Currency', () => {
 })
 export function Save(){
 //var currCode = "004" + new Date().getMilliseconds();
-cy.visit('http://192.168.19.97:1750/Financials/Setup/Currencies')
+cy.visit('http://40.81.28.195:1110/Financials/Setup/Currencies')
 cy.wait(1000);
 cy.fixture('Currency.json').then((payload) => {
     console.log({payload: payload.validData})
@@ -24,13 +24,13 @@ cy.fixture('Currency.json').then((payload) => {
 
 cy.get('[aria-label="Add New"]').click()
 cy.wait(1000);
-cy.get('#mui-18').type(CurCode)
+cy.get('#CurrencyList-CurCode').type(CurCode)
 cy.wait(1000);
-cy.get('#mui-19').type(CurName)
+cy.get('#CurrencyList-CurName').type(CurName)
 cy.wait(1000);
-cy.get('#mui-20').type(CurSymbol)
+cy.get('#CurrencyList-CurSymbol').type(CurSymbol)
 cy.wait(1000);
-cy.get('#mui-21').type(CurDecName)
+cy.get('#CurrencyList-CurDecName').type(CurDecName)
 cy.wait(1000);
 cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(2)').click()
 cy.wait(7000);
@@ -51,19 +51,18 @@ export function View(){
     cy.wait(1000);
 }
 export function Edit(){
-   //cy.visit('http://192.168.19.97:1750/Financials/Setup/Currencies')
     cy.get('[index="2"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
     cy.wait(1000);
-    cy.get('#mui-19').clear()
-    cy.get('#mui-19').type('dollar currency')
+    cy.get('#CurrencyList-CurName').clear()
+    cy.get('#CurrencyList-CurName').type('dollar currency')
     cy.wait(1000);
-    cy.get('#mui-20').clear()
-    cy.get('#mui-20').type('$')
+    cy.get('#CurrencyList-CurSymbol').clear()
+    cy.get('#CurrencyList-CurSymbol').type('$')
     cy.wait(1000);
-    cy.get('#mui-21').clear()
-    cy.get('#mui-21').type('cent')
+    cy.get('#CurrencyList-CurDecName').clear()
+    cy.get('#CurrencyList-CurDecName').type('cent')
     cy.wait(1000);
     //exchange rate btn
     cy.get('.MuiGrid-container > :nth-child(5) > .MuiButtonBase-root').click()
@@ -71,9 +70,11 @@ export function Edit(){
     //Add btn
     cy.get('.MTableToolbar-title-9 > div > .MuiButtonBase-root').click()
     cy.wait(1000);
-    cy.get('#mui-886').clear()
-    cy.get('#mui-886').type('5000')
-    cy.wait(1000);
+    // cy.get('[value="0"] > .NumberFormat > .MuiFormControl-root > .MuiInputBase-root > #CurrencyList-ExchRate')
+    // .clear()
+    // cy.get('[value="0"] > .NumberFormat > .MuiFormControl-root > .MuiInputBase-root > #CurrencyList-ExchRate')
+    // .type('5000')
+    // cy.wait(1000);
     //save btn
     cy.get(':nth-child(10) > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(2)').click()
     cy.wait(1000);

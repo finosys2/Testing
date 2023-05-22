@@ -1,0 +1,13 @@
+{
+    "FormName": "DonorReceipts",
+
+    "validData":{
+        "Amount": "6685.00",
+        "Remarks": "receipt donor accept"
+    },
+
+    "InvalidData":{
+        "Amount": "",
+        "Remarks": "receipt donor accept"
+    }
+}

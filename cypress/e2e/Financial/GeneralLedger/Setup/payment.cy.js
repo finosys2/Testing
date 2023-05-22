@@ -13,7 +13,7 @@ describe('Payment Terms', () => {
     })
 })
 export function Save() {
-    cy.visit('http://192.168.19.97:1750/Financials/Setup/PaymentTerms')
+    cy.visit('http://40.81.28.195:1110/Financials/Setup/PaymentTerms')
     //cy.visit('http://40.81.28.195:1550/Financials/Setup/PaymentTerms')
     cy.wait(1000);
     cy.fixture('PaymentTerm.json').then((payload) => {
@@ -23,20 +23,21 @@ export function Save() {
 
     cy.get('[aria-label="Add New"]').click()
     cy.wait(1000);
-    cy.get('.MuiGrid-container > :nth-child(1) > :nth-child(1) > .MuiFormControl-root').type(PayTermCode)
+    cy.get('#PaymentTerms-PayTermCode').type(PayTermCode)
     cy.wait(1000);
-    cy.get(':nth-child(2) > :nth-child(1) > .MuiFormControl-root').type(PayTermDesc)
+    cy.get('#PaymentTerms-PayTermDesc').type(PayTermDesc)
     cy.wait(1000);
-    cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(2)').click()
+    cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(2)')
+    .click()
     cy.wait(7000);
     cy.get('[aria-label="Add New"]').click()
     cy.wait(1000);
-    cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(1)').click()
+    cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(1)')
+    .click()
     cy.wait(1000);
 })
 }
 export function View() {
-    //cy.visit('http://192.168.19.97:1750/Financials/Setup/PaymentTerms')
     cy.get('[index="4"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > [tabindex="0"]').click()
@@ -52,11 +53,8 @@ export function Edit() {
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
     cy.wait(1000);
-    cy.get('#mui-19').clear()
-    cy.wait(1000);
-    cy.get('#mui-19').type(PayTermDesc)
-    cy.wait(1000);
-    cy.get('#alert-dialog-slide-description > div > div > div:nth-child(2) > div > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-2.css-1o7apob-MuiGrid-root > div > label > span.MuiCheckbox-root.MuiCheckbox-colorPrimary.MuiButtonBase-root.MuiCheckbox-root.MuiCheckbox-colorPrimary.PrivateSwitchBase-root.Mui-checked.css-wvbhqt-MuiButtonBase-root-MuiCheckbox-root > input').click()
+    cy.get('#PaymentTerms-PayTermDesc').clear()
+    cy.get('#PaymentTerms-PayTermDesc').type(PayTermDesc)
     cy.wait(1000);
     cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(2)').click()
     cy.wait(7000);

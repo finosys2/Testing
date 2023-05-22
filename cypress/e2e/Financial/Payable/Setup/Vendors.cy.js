@@ -32,9 +32,9 @@ export function Save(){
 
     cy.get('[aria-label="Add New"]').click()
     cy.wait(1000);
-    cy.get('#VendorCode').type(VendorCode)
+    cy.get('#Vendors-VendorCode').type(VendorCode)
     cy.wait(1000);
-    cy.get('#Vendor').type(Vendor)
+    cy.get('#Vendors-Vendor').type(Vendor)
     cy.wait(1000);
     cy.get(':nth-child(3) > :nth-child(1) > .MuiFormControl-root').type(NTNNo)
     cy.wait(1000);
@@ -53,6 +53,9 @@ export function Save(){
     cy.wait(1000);
     cy.get(':nth-child(7) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root')
     .click().get('#AccPurAcctCode-AccPurAcctCode-option-1').click({force: true})
+    cy.wait(1000);
+    cy.get('#Vendors-CreditLimit').clear()
+    cy.get('#Vendors-CreditLimit').type('100000')
     cy.wait(1000);
     //Add click 
     cy.get('.MTableToolbar-title-10 > div > .MuiButtonBase-root').click()
@@ -82,7 +85,7 @@ export function Save(){
 })}
     
 export function View(){
-    cy.get('[index="6"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > [tabindex="0"]').click()
     cy.wait(1000);
@@ -90,12 +93,12 @@ export function View(){
     cy.wait(1000);
 }
 export function Edit(){
-    cy.get('[index="6"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
     cy.wait(1000);
-    cy.get('#Vendor').clear()
-    cy.get('#Vendor').type('rimsha xyz')
+    cy.get('#Vendors-Vendor').clear()
+    cy.get('#Vendors-Vendor').type('rimsha xyz')
     cy.wait(1000);
     cy.get('.MuiGrid-grid-md-8 > .MuiBox-root > .MuiPaper-root > :nth-child(1) > .MuiCardContent-root > .MuiGrid-container > :nth-child(1)').click()
     cy.wait(1000);
@@ -122,8 +125,6 @@ export function Download(){
     cy.wait(1000);
 }
 export function Search(){
-    cy.visit('http://40.81.28.195:1550/Financials/Setup/Vendors')
-cy.wait(1000);
     cy.get('#VendorCode').type('00')
     cy.wait(1000);
     cy.get('#VendorCode').clear()
@@ -134,13 +135,13 @@ cy.wait(1000);
     cy.wait(1000);
 }
 export function Delete(){
-    cy.get('[index="6"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
     cy.wait(1000);
     cy.get('.MuiButton-outlined').click()
     cy.wait(1000);
-    cy.get('[index="6"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
     cy.wait(1000);

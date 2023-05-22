@@ -25,11 +25,11 @@ cy.fixture('VendorProfile.json').then((payload) => {
     const PayTermCode = payload.validData.PayTermCode
 
 //Record 1 (Save & continue)
-cy.get('.MuiContainer-root > .MuiFab-root').click()
+cy.get('[aria-label="Add New"]').click()
 cy.wait(1000);
-cy.get('#Code').type(VendProfileCode)
+cy.get('#VendorProfiles-VendProfileCode').type(VendProfileCode)
 cy.wait(1000);
-cy.get('#Description').type(VendProfileDesc)
+cy.get('#VendorProfiles-VendProfileDesc').type(VendProfileDesc)
 cy.wait(1000);
 cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root').clear()
 cy.get(':nth-child(3) > .NumberFormat > .MuiFormControl-root')
@@ -95,11 +95,11 @@ export function Edit() {
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
     cy.wait(1000);
-    cy.get('#Description').clear()
-    cy.get('#Description').type(VendProfileDesc)
+    cy.get('#VendorProfiles-VendProfileDesc').clear()
+    cy.get('#VendorProfiles-VendProfileDesc').type(VendProfileDesc)
     cy.wait(1000);
-    cy.get('#mui-254').clear()
-    cy.get('#mui-254').type(CreditLimit)
+    cy.get('#VendorProfiles-CreditLimit').clear()
+    cy.get('#VendorProfiles-CreditLimit').type(CreditLimit)
     cy.wait(1000);
     cy.get(':nth-child(4) > .MuiStack-root > .MuiAutocomplete-root > .MuiFormControl-root')
     .click().get('#TaxSchedule-TaxSchedule-option-2').click({force: true})

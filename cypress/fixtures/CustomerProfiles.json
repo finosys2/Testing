@@ -1,0 +1,18 @@
+{
+    "FormName": "CustomerProfile",
+
+    "validData": {
+        "CPCode": "5454",
+        "CP": "Customer",
+        "CreditLimit": "13000",
+        "FinChInterestRate": "500.00",
+        "MinInvValforFinCh": "779.00"
+    },
+    "invalidData":{
+        "CPCode": "",
+        "CP": "Customer",
+        "CreditLimit": "13000",
+        "FinChInterestRate": "500.00",
+        "MinInvValforFinCh": "779.00"
+    }
+}

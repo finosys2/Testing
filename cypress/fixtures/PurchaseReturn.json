@@ -1,0 +1,21 @@
+{
+    "FormName": "PurchaseReturn",
+
+    "validData":{
+        "Description": "abcshefd",
+        "Freight_Cur": "330",
+        "Discount_Cur": "20",
+        "Packing_Quantity":"60",
+        "Price": "600",
+        "Quantity": "18",
+        "Tax_Cur": "10"
+    },
+
+    "InvalidData":{
+        "Description": "abcshefd",
+        "Freight_Cur": "",
+        "Packing_Quantity":"",
+        "Price": "",
+        "Quantity": "18"
+    }
+}

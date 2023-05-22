@@ -1,0 +1,23 @@
+{
+    "FormName": "Adjustments",
+
+    "validData":{
+        "Description": "adjustment of stock material",
+        "UserDef1": "user1",
+        "UserDef2": "user2",
+        "UserDef3": "user3",
+        "UserDef4": "user4",
+        "Packing_Quantity": "30",
+        "Quantity":"40"
+    },
+
+    "InvalidData":{
+        "Description": "adjustment of stock material",
+        "UserDef1": "",
+        "UserDef2": "",
+        "UserDef3": "",
+        "UserDef4": "",
+        "Packing_Quantity": "",
+        "Quantity":""
+    }
+}

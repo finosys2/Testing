@@ -1,0 +1,21 @@
+{
+    "FormName": "SalesInvoice",
+
+    "validData":{
+        "Discount_Cur": "40",
+        "Freight_Cur": "350",
+        "Description": "sales Invoice description",
+        "Packing_Quantity": "45",
+        "Quantity": "35",
+        "Price":"7500"
+    },
+
+    "inValidData":{
+        "Discount_Cur": "",
+        "Freight_Cur": "",
+        "Description": "sales Invoice description",
+        "Packing_Quantity": "",
+        "Quantity": "",
+        "Price":""
+    }
+}

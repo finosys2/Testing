@@ -13,8 +13,7 @@ describe('Tax Schedule', () => {
     })
 })
 export function Save() {  
-    //cy.visit('http://40.81.28.195:1550/Financials/Setup/TaxSchedule')
-    cy.visit('http://192.168.19.97:1750/Financials/Setup/TaxSchedule')
+    cy.visit('http://40.81.28.195:1110/Financials/Setup/TaxSchedule')
     cy.wait(1000);
     cy.fixture('TaxSchdule.json').then((payload) => {
         console.log({payload: payload.validData})
@@ -23,11 +22,12 @@ export function Save() {
 
     cy.get('[aria-label="Add New"]').click()
     cy.wait(1000);
-    cy.get('#mui-18').type(TaxScheduleCode, { force: true }).blur()
+    cy.get('#TaxSchedule-TaxScheduleCode').type(TaxScheduleCode, { force: true }).blur()
     cy.wait(1000);
-    cy.get('#mui-19').type(TaxSchedule, { force: true }).blur()
+    cy.get('#TaxSchedule-TaxSchedule-1').type(TaxSchedule, { force: true }).blur()
     cy.wait(1000);
-    cy.get('#alert-dialog-slide-description > div > div > div:nth-child(2) > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-10.css-1udccdh-MuiGrid-root > div > div:nth-child(1) > div > div > div > div.MuiListItemIcon-root.css-1jdo60o-MuiListItemIcon-root > span > input').click()
+    cy.get('#alert-dialog-slide-description > div > div > div:nth-child(2) > div > div > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-10.css-1udccdh-MuiGrid-root > div > div:nth-child(1) > div > div > div:nth-child(2) > div.MuiListItemIcon-root.css-1jdo60o-MuiListItemIcon-root > span > input')
+    .click()
     cy.wait(1000);
     cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(2)').click()
     cy.wait(1000);
@@ -51,9 +51,9 @@ export function Edit() {
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(2)').click()
     cy.wait(1000);
-    cy.get('#mui-19').clear()
-    cy.wait(1000);
-    cy.get('#mui-19').type(TaxSchedule, { force: true }).blur()
+    cy.get('#TaxSchedule-TaxSchedule-1').clear()
+    cy.get('#TaxSchedule-TaxSchedule-1')
+    .type(TaxSchedule, { force: true }).blur()
     cy.wait(1000);
     cy.get(':nth-child(1) > .MuiPaper-root > .MuiList-root > :nth-child(1)').click()
     cy.wait(1000);

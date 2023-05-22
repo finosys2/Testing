@@ -1,0 +1,19 @@
+{
+    "FormName": "GoodsReceipt",
+
+    "validData":{
+        "Description": "good receipts",
+        "Freight_Cur": "550",
+        "Packing_Quantity": "10",
+        "Price": "1500",
+        "Quantity": "10"
+    },
+
+    "InvalidData":{
+        "Description": "good receipts",
+        "Freight_Cur": "",
+        "Packing_Quantity": "",
+        "Price": "",
+        "Quantity": "10"
+    }
+}

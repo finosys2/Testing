@@ -1,0 +1,14 @@
+{
+  "FormName": "VendorCategories",
+
+  "validData": {
+    "VendorCategoryCode": "007",
+    "VendorCategoryDesc": "Cat Default2",
+    "VendCategoryDesc1": "Cat Default2 edited"
+  },
+
+  "InvalidData": {
+    "VendCategoryCode": "",
+    "VendCategoryDesc": ""
+  }
+}

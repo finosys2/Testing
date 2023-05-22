@@ -1,0 +1,19 @@
+{
+    "FormName": "PurchaseQuote",
+
+    "validData":{
+        "Description": "Test Purchase Quote",
+        "Freight_Cur": "500",
+        "Packing_Quantity": "8",
+        "Price": "500",
+        "Quantity": "8"
+    },
+
+    "invalidData":{
+        "Description": "Test Purchase Quote",
+        "Freight_Cur": "",
+        "Packing_Quantity": "",
+        "Price": "",
+        "Quantity": "8"
+    }
+}

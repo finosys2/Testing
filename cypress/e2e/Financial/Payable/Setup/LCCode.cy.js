@@ -26,24 +26,20 @@ export function Save() {
 
         cy.get('[aria-label="Add New"]').click()
         cy.wait(1000);
-        cy.get('.MuiGrid-container > :nth-child(1) > :nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #LCCode')
-            .type(LCCode)
+        cy.get('#LCCodes-LCCode').type(LCCode)
         cy.wait(1000);
-        cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #LCDesc')
-            .type(LCDesc)
+        cy.get('#LCCodes-LCDesc').type(LCDesc)
         cy.wait(1000);
-        cy.get(':nth-child(3) > :nth-child(1) > .MuiFormControl-root')
-            .type(VenBankName)
+        cy.get('#LCCodes-VenBankName').type(VenBankName)
         cy.wait(1000);
-        cy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > #VendorName')
-            .type(VendorName)
+        cy.get('#LCCodes-VendorName').type(VendorName)
         cy.wait(1000);
-        cy.get(':nth-child(5) > :nth-child(1) > .MuiFormControl-root')
-            .type(BankName)
+        cy.get('#LCCodes-BankName').type(BankName)
         cy.wait(1000);
-        cy.get('.MuiStack-root > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root').click()
+        cy.get('.MuiStack-root > .MuiFormControl-root > .MuiInputBase-root > .MuiInputAdornment-root > .MuiButtonBase-root')
+        .click()
         cy.wait(1000);
-        cy.get(':nth-child(5) > :nth-child(6)').click()
+        cy.get('.MuiDayPicker-monthContainer > :nth-child(5) > :nth-child(4)').click()
         cy.wait(1000);
         cy.get('.css-zw3mfo-MuiModal-root-MuiDialog-root > .MuiDialog-container > .MuiPaper-elevation24 > .MuiDialogActions-root > :nth-child(2)').click()
         cy.wait(1000);

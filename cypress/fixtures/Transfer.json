@@ -1,0 +1,13 @@
+{
+    "FormName": "Transfers",
+
+    "validData":{
+        "Description": "stock transfer details",
+        "Quantity": "20"
+    },
+
+    "invalidData":{
+        "Description": "",
+        "Quantity": ""
+    }
+}

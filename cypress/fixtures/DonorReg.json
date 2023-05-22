@@ -1,0 +1,27 @@
+{
+    "FormName": "DonorRegistration",
+    "validData": {
+        "DonorCode": "1212",
+        "DonorName": "donor",
+        "Cnic": "4232317593435",
+        "NTN": "42323232",
+        "Email": "sas@gmail.com",
+        "Address": "address",
+        "City": "City",
+        "Country": "Country",
+        "Phone1": "123456",
+        "Phone2": "123443"
+    },
+    "invalidData": {
+        "DonorCode": "121e",
+        "DonorName": "donor",
+        "Cnic": "4232317593435",
+        "NTN": "42323232",
+        "Email": "sas@gmail",
+        "Address": "address",
+        "City": "",
+        "Country": "Country",
+        "Phone1": "",
+        "Phone2": "123443"
+    }
+}

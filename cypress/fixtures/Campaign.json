@@ -1,7 +1,11 @@
 {
     "FormName": "Campaign",
-    "Header": {
+    "validData": {
         "CampaignCode": "423423",
+        "Campaign": "test"
+    },
+    "invalidData": {
+        "CampaignCode": "",
         "Campaign": "test"
     }
 }

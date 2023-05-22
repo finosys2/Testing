@@ -1,0 +1,29 @@
+{
+    "FormName": "SalesDispatch",
+
+    "validData":{
+        "Discount_Cur": "20",
+        "Freight_Cur": "300",
+        "Description": "delivery order notes",
+        "DriverName": "Arsalan",
+        "DocumentNo": "SNO-2394383",
+        "DriverContact": "03492457372",
+        "VehicleNo": "AAA1234",
+        "Packing_Quantity":"40",
+        "Quantity":"52",
+        "Price":"1000"
+    },
+
+    "inValidData":{
+        "Discount_Cur": "",
+        "Freight_Cur": "",
+        "Description": "delivery order notes",
+        "DriverName": "",
+        "DocumentNo": "",
+        "DriverContact": "03492457372",
+        "VehicleNo": "AAA1234",
+        "Packing_Quantity":"",
+        "Quantity":"",
+        "Price":""
+    }
+}
