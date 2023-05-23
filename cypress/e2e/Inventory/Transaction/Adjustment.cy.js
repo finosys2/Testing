@@ -4,7 +4,7 @@ describe('Adjustments', () => {
     it('Adjustments CRUD', () => {
         // cy.visit('http://localhost:1750')
         Login();
-        //Save(); 
+        Save(); 
         View();      
         Edit();  
         Download();
@@ -66,8 +66,6 @@ export function Save() {
     cy.wait(1000);
 })}
 export function View() {
-    cy.visit('https://apps.finosys-sbs.com/Inventory/Transaction/Adjustments')
-    cy.wait(3000);
     cy.get('[index="4"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > .MuiButtonBase-root').click()

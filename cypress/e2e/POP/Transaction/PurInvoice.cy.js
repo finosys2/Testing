@@ -8,7 +8,9 @@ describe('Purchase Invoice', () => {
         View();       
         Edit();
         Download();
+        Search();
         Delete();
+        Post();
     })
 })
 
@@ -107,8 +109,29 @@ export function Download() {
     cy.get('.css-10nakn3-MuiModal-root-MuiPopover-root-MuiMenu-root > .MuiPaper-root > .MuiList-root > [tabindex="-1"]').click()
     cy.wait(2000);
 }
+export function Search() {
+    cy.get('#TransNo').type('PI-000009')
+    cy.wait(1000);
+    cy.get('#TransNo').clear()
+    cy.get('#Vendor').type('Test Supplier')
+    cy.wait(1000);
+    cy.get('#Vendor').clear()
+}
 export function Delete() {
     cy.get('[index="1"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.wait(1000);
+    cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
+    cy.wait(1000);
+    cy.get('.MuiGrid-root > .MuiButton-contained').click()
+}
+export function Post() {
+    cy.get('[index="5"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
+    cy.wait(1000);
+    cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
+    cy.wait(1000);
+    cy.get('.MuiButton-outlined').click()
+    cy.wait(1000);
+    cy.get('[index="5"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > :nth-child(3)').click()
     cy.wait(1000);

@@ -4,7 +4,7 @@ describe('Item Class', () => {
     it('Item Class CRUD', () => {
         // cy.visit('http://localhost:1750')
         Login();
-        //Save();       
+        Save();       
         Edit();
         Delete();
         Download();
@@ -49,8 +49,6 @@ export function Save() {
 })}
 
 export function Edit() {
-    cy.visit('https://apps.finosys-sbs.com/Inventory/Setup/ItemClass')
-    cy.wait(2000);
     cy.get('[index="0"] > .MuiTableCell-paddingNone > div > .MuiButtonBase-root').click()
     cy.wait(1000);
     cy.get('#simple-menu > .MuiPaper-root > .MuiList-root > [tabindex="0"]').click()
