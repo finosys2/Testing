@@ -11,7 +11,8 @@ describe('Period', () => {
     })
 });
 export function Save() {
-    cy.visit('http://40.81.28.195:1110/Financials/Setup/Period')
+    //cy.visit('http://40.81.28.195:1110/Financials/Setup/Period')
+    cy.visit('https://apps.finosys-sbs.com/Financials/Setup/Period')
     cy.wait(1000);
     cy.fixture('Period.json').then((payload) => {
         console.log({payload: payload.validData})
