@@ -1,12 +1,3 @@
-import { Login} from "../../Login.cy.js"
-
-describe('Item Class', () => {
-    it('Item Class CRUD', () => {
-        // cy.visit('http://localhost:1750')
-        Login();
-        Save();       
-    })
-})
 
 export function Save() {
     //cy.visit('http://40.81.28.195:1110/Inventory/Setup/ItemAssignment')
